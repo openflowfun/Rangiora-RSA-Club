@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join or Renew Membership | Rangiora RSA Club</title>
+  <meta name="description" content="Membership of the Rangiora RSA Club is open to all adults - just $30 per year (1 April to 31 March). Join online, add a club section, and be in for the Thursday members draw.">
+  <meta property="og:title" content="Join or Renew Membership | Rangiora RSA Club">
+  <meta property="og:description" content="Membership of the Rangiora RSA Club is open to all adults - just $30 per year (1 April to 31 March). Join online, add a club section, and be in for the Thursday members draw.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          poppy: { DEFAULT: '#C41E3A', dark: '#9A1830', light: '#E8556E' },
+          navy:  { DEFAULT: '#1B2A41', dark: '#111C2E', light: '#2C3E5C' },
+          cream: { DEFAULT: '#FAF6F0', dark: '#F0E9DE' }
+        },
+        fontFamily: { display: ['"Playfair Display"','serif'], body: ['Inter','system-ui','sans-serif'] }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="font-body text-navy bg-cream">
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="bg-navy text-white/90 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-9">
+      <p class="hidden sm:block">Open 7 days &middot; Mon&ndash;Sat 10.30am&ndash;11pm &middot; Sun 11am&ndash;10pm</p>
+      <div class="flex items-center gap-5 ml-auto">
+        <a href="tel:+6433137123" class="hover:text-white font-medium">03 313 7123</a>
+        <a href="mailto:rangiorarsa@gmail.com" class="hidden md:inline hover:text-white">rangiorarsa@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+    <nav class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Rangiora RSA Club home">
+        <img src="assets/img/RSA-club-logo.webp" alt="Rangiora RSA Club logo" class="h-14 w-auto rounded-sm">
+        <span class="leading-tight">
+          <span class="font-display font-bold text-xl block whitespace-nowrap">Rangiora RSA Club</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-poppy font-bold">Est. 1919</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 font-medium">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+        <li><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+        <li><a class="nav-link" href="events.html">Events</a></li>
+        <li><a class="nav-link" href="news.html">News</a></li>
+        <li class="relative group">
+          <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">More
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="contact.html" class="btn-ghost text-sm">Visit Us</a>
+        <a href="membership.html" class="btn-primary text-sm">Join Now</a>
+      </div>
+      <button id="menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-cream" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg class="icon-open w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close hidden w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M6 18 18 6"/></svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-black/5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <div class="px-6 py-6 space-y-1 font-medium text-lg">
+        <a class="block py-2" href="index.html">Home</a>
+        <a class="block py-2" href="about.html">About</a>
+        <a class="block py-2" href="facilities.html">Facilities</a>
+        <a class="block py-2" href="restaurant.html">Restaurant</a>
+        <a class="block py-2 text-poppy" href="membership.html">Membership</a>
+        <a class="block py-2" href="events.html">Events</a>
+        <a class="block py-2" href="news.html">News</a>
+        <a class="block py-2" href="gallery.html">Gallery</a>
+        <a class="block py-2" href="board.html">Board</a>
+        <a class="block py-2" href="faq.html">FAQs</a>
+        <a class="block py-2" href="contact.html">Contact</a>
+        <a class="btn-primary w-full mt-4" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+<main id="content">
+
+    <!-- Page hero -->
+    <section class="relative py-32 overflow-hidden">
+      <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2000&q=80" alt="Group of friends enjoying each other's company" loading="lazy">
+      <div class="absolute inset-0 bg-navy/80"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 text-white">
+        <p class="eyebrow text-poppy-light">Open to All Adults</p>
+        <h1 class="font-display text-5xl sm:text-6xl font-bold mt-3">Join the Club</h1>
+        <p class="mt-5 max-w-2xl text-white/80 text-lg">Meet people, share stories, have a laugh and help out in your community - from just $30 a year.</p>
+      </div>
+    </section>
+
+    <!-- Benefits + pricing -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-[1fr_400px] gap-14">
+        <div>
+          <p class="reveal eyebrow">Why Join?</p>
+          <h2 class="reveal font-display text-4xl font-bold mt-3">Membership benefits</h2>
+          <div class="mt-10 grid sm:grid-cols-2 gap-6">
+            <div class="reveal card-hover bg-white rounded-2xl p-7 shadow-sm">
+              <span class="w-12 h-12 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-xl font-bold">1</span>
+              <h3 class="font-bold text-lg mt-4">Thursday Members Draw</h3>
+              <p class="mt-2 text-navy/70 text-sm">Held every Thursday at 6.00pm - be present and financial to be eligible to win.</p>
+            </div>
+            <div class="reveal delay-1 card-hover bg-white rounded-2xl p-7 shadow-sm">
+              <span class="w-12 h-12 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-xl font-bold">2</span>
+              <h3 class="font-bold text-lg mt-4">Join Club Sections</h3>
+              <p class="mt-2 text-navy/70 text-sm">Darts, indoor bowls, snooker, fishing, golf, pool, women's section, lifestyle and more.</p>
+            </div>
+            <div class="reveal card-hover bg-white rounded-2xl p-7 shadow-sm">
+              <span class="w-12 h-12 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-xl font-bold">3</span>
+              <h3 class="font-bold text-lg mt-4">Great Facilities</h3>
+              <p class="mt-2 text-navy/70 text-sm">Lounge bar, courtyard, gaming room, sport screens, TAB and the Spitfire Restaurant.</p>
+            </div>
+            <div class="reveal delay-1 card-hover bg-white rounded-2xl p-7 shadow-sm">
+              <span class="w-12 h-12 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-xl font-bold">4</span>
+              <h3 class="font-bold text-lg mt-4">Community &amp; Welfare</h3>
+              <p class="mt-2 text-navy/70 text-sm">Support veterans and local causes, and enjoy the company of over 4,000 fellow members.</p>
+            </div>
+          </div>
+          <div class="reveal mt-10 bg-cream-dark/70 border border-navy/5 rounded-2xl p-7">
+            <h3 class="font-bold text-lg">Served in the Forces?</h3>
+            <p class="mt-2 text-navy/75 text-sm leading-relaxed">If you have taken the Oath of Allegiance and served in the Armed Forces at any time - overseas service, home service during WWII, compulsory military training, National Service, Volunteer Territorials, Regular Force or Police - you are eligible as a service member. Record your service and service number on the application form.</p>
+          </div>
+        </div>
+
+        <!-- Pricing card -->
+        <aside class="reveal-right">
+          <div class="sticky top-28 bg-navy text-white rounded-3xl p-9 shadow-2xl shadow-navy/30 overflow-hidden relative">
+            <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-poppy/20"></div>
+            <p class="eyebrow text-poppy-light">Annual Membership</p>
+            <p class="font-display text-6xl font-bold mt-4">$30<span class="text-xl font-medium text-white/60">/year</span></p>
+            <ul class="mt-7 space-y-3 text-white/85 text-sm">
+              <li class="flex gap-3"><span class="text-poppy-light">&#10003;</span> Open to all adults</li>
+              <li class="flex gap-3"><span class="text-poppy-light">&#10003;</span> Subscription runs 1 April &ndash; 31 March</li>
+              <li class="flex gap-3"><span class="text-poppy-light">&#10003;</span> Pay by bank transfer or card ($1 card surcharge)</li>
+              <li class="flex gap-3"><span class="text-poppy-light">&#10003;</span> Full refund if your application isn't accepted</li>
+              <li class="flex gap-3"><span class="text-poppy-light">&#10003;</span> Optional section membership when you join</li>
+            </ul>
+            <a href="#apply" class="btn-primary w-full mt-8">Apply Below</a>
+            <p class="mt-4 text-white/50 text-xs leading-relaxed">Applications are approved once payment has cleared and are subject to the Constitution &amp; Rules of the Rangiora RSA Club Inc., accepted or declined by the Board.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Application form -->
+    <section id="apply" class="bg-white py-24">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="text-center">
+          <p class="reveal eyebrow poppy-divider">Application for Membership</p>
+          <h2 class="reveal font-display text-4xl font-bold mt-4">Join or renew online</h2>
+          <p class="reveal mt-4 text-navy/70 text-sm max-w-xl mx-auto">I hereby apply for membership to the Rangiora RSA and Club (Inc) knowing that, as a member, I shall be bound by the Constitution &amp; Rules of the Club.</p>
+        </div>
+        <!-- Formspree: replace YOUR_FORM_ID with your form ID (see README.md) -->
+        <form class="reveal mt-10 grid sm:grid-cols-2 gap-5 bg-cream rounded-2xl p-8 shadow-lg shadow-navy/5" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-formspree>
+          <div class="sm:col-span-2">
+            <span class="form-label">Are you a new or existing member? *</span>
+            <div class="flex flex-wrap gap-6 mt-1">
+              <label class="flex items-center gap-2"><input type="radio" name="member_type" value="New application" required class="accent-poppy w-4 h-4"> Applying for membership</label>
+              <label class="flex items-center gap-2"><input type="radio" name="member_type" value="Renewal" class="accent-poppy w-4 h-4"> Renewing (existing member)</label>
+            </div>
+          </div>
+          <div>
+            <label class="form-label" for="m-number">Current membership number <span class="font-normal text-navy/50">(renewals)</span></label>
+            <input class="form-input" id="m-number" name="membership_number" type="text">
+          </div>
+          <div>
+            <label class="form-label" for="m-title">Title</label>
+            <select class="form-input" id="m-title" name="title"><option></option><option>Mr.</option><option>Mrs.</option><option>Miss.</option><option>Ms.</option></select>
+          </div>
+          <div>
+            <label class="form-label" for="m-first">First name *</label>
+            <input class="form-input" id="m-first" name="first_name" type="text" required autocomplete="given-name">
+          </div>
+          <div>
+            <label class="form-label" for="m-last">Last name *</label>
+            <input class="form-input" id="m-last" name="last_name" type="text" required autocomplete="family-name">
+          </div>
+          <div class="sm:col-span-2">
+            <label class="form-label" for="m-address">Street address *</label>
+            <input class="form-input" id="m-address" name="address" type="text" required autocomplete="street-address">
+          </div>
+          <div>
+            <label class="form-label" for="m-city">City / town *</label>
+            <input class="form-input" id="m-city" name="city" type="text" required>
+          </div>
+          <div>
+            <label class="form-label" for="m-postcode">Postcode *</label>
+            <input class="form-input" id="m-postcode" name="postcode" type="text" required autocomplete="postal-code">
+          </div>
+          <div>
+            <label class="form-label" for="m-phone">Phone / mobile</label>
+            <input class="form-input" id="m-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div>
+            <label class="form-label" for="m-email">Email *</label>
+            <input class="form-input" id="m-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div>
+            <label class="form-label" for="m-dob">Date of birth *</label>
+            <input class="form-input" id="m-dob" name="date_of_birth" type="date" required>
+          </div>
+          <div>
+            <label class="form-label" for="m-occupation">Occupation</label>
+            <input class="form-input" id="m-occupation" name="occupation" type="text">
+          </div>
+          <fieldset class="sm:col-span-2 border-t border-navy/10 pt-5">
+            <legend class="sr-only">Service details</legend>
+            <p class="form-label">Where applicable - service details <span class="font-normal text-navy/50">(optional)</span></p>
+            <div class="grid sm:grid-cols-2 gap-5 mt-1">
+              <select class="form-input" name="service" aria-label="Service branch"><option value="">Select your service if applicable</option><option>Navy</option><option>Army</option><option>Air Force</option><option>Police</option></select>
+              <input class="form-input" name="service_number" type="text" placeholder="Service number" aria-label="Service number">
+            </div>
+          </fieldset>
+          <fieldset class="sm:col-span-2 border-t border-navy/10 pt-5">
+            <legend class="sr-only">Join a section</legend>
+            <p class="form-label">Join a section <span class="font-normal text-navy/50">(optional)</span></p>
+            <div class="flex flex-wrap gap-x-6 gap-y-2 mt-1 text-sm">
+              <label class="flex items-center gap-2"><input type="checkbox" name="sections" value="Women's" class="accent-poppy w-4 h-4"> Women's</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="sections" value="Golf" class="accent-poppy w-4 h-4"> Golf</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="sections" value="Pool" class="accent-poppy w-4 h-4"> Pool</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="sections" value="Darts" class="accent-poppy w-4 h-4"> Darts</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="sections" value="Indoor Bowls" class="accent-poppy w-4 h-4"> Indoor Bowls</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="sections" value="Fishing" class="accent-poppy w-4 h-4"> Fishing</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="sections" value="Snooker" class="accent-poppy w-4 h-4"> Snooker</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="sections" value="Lifestyle" class="accent-poppy w-4 h-4"> Lifestyle</label>
+            </div>
+          </fieldset>
+          <div class="sm:col-span-2 border-t border-navy/10 pt-5">
+            <span class="form-label">Preferred payment method *</span>
+            <div class="flex flex-wrap gap-6 mt-1">
+              <label class="flex items-center gap-2"><input type="radio" name="payment" value="Bank transfer" required class="accent-poppy w-4 h-4"> Bank transfer</label>
+              <label class="flex items-center gap-2"><input type="radio" name="payment" value="Card" class="accent-poppy w-4 h-4"> Card <span class="text-navy/50 text-sm">($1 surcharge)</span></label>
+            </div>
+            <p class="mt-2 text-xs text-navy/55">Bank account details and payment instructions will be sent to your email address after your application is received.</p>
+          </div>
+          <div class="sm:col-span-2">
+            <label class="flex items-start gap-3 text-sm text-navy/75">
+              <input type="checkbox" name="terms" required class="accent-poppy w-4 h-4 mt-0.5">
+              <span>I accept the terms and conditions: I undertake, if elected, to abide by the constitution and rules of the Rangiora RSA Club Inc. My application is subject to the registered rules of the Club and will be accepted or declined by the Board. If my application is not accepted I will receive a full refund. Pending acceptance, I have the rights and privileges only of a visitor at the discretion of the Board. *</span>
+            </label>
+            <label class="flex items-start gap-3 text-sm text-navy/75 mt-3">
+              <input type="checkbox" name="newsletter" value="Yes" checked class="accent-poppy w-4 h-4 mt-0.5">
+              <span>Keep me informed - receive the latest news and events via email.</span>
+            </label>
+          </div>
+          <input type="hidden" name="_subject" value="Membership application - rangiorarsa.nz">
+          <div class="sm:col-span-2">
+            <button type="submit" class="btn-primary w-full sm:w-auto">Submit Application</button>
+            <p class="form-note hidden mt-3 text-sm text-poppy"></p>
+          </div>
+        </form>
+        <p class="mt-6 text-center text-navy/55 text-sm">Prefer to join in person? Call in at 82 Victoria Street or phone <a href="tel:+6433137123" class="text-poppy font-semibold hover:underline">03 313 7123</a>.</p>
+      </div>
+    </section>
+
+    <!-- Key facts -->
+    <section class="py-20">
+      <div class="max-w-5xl mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        <div class="reveal bg-white rounded-2xl p-6 shadow-sm"><p class="font-display text-lg font-bold">Open to all adults</p><p class="text-sm text-navy/60 mt-1">No service history required</p></div>
+        <div class="reveal delay-1 bg-white rounded-2xl p-6 shadow-sm"><p class="font-display text-lg font-bold">1 April &ndash; 31 March</p><p class="text-sm text-navy/60 mt-1">Annual subscription period</p></div>
+        <div class="reveal delay-2 bg-white rounded-2xl p-6 shadow-sm"><p class="font-display text-lg font-bold">Approved on payment</p><p class="text-sm text-navy/60 mt-1">Once payment has cleared</p></div>
+        <div class="reveal delay-3 bg-white rounded-2xl p-6 shadow-sm"><p class="font-display text-lg font-bold">Thursday 6pm draw</p><p class="text-sm text-navy/60 mt-1">Be present &amp; financial to win</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy-dark text-white">
+    <div class="h-1 bg-gradient-to-r from-poppy via-poppy-light to-poppy"></div>
+    <div class="max-w-7xl mx-auto px-4 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl font-bold">Rangiora RSA <span class="text-poppy-light">Club</span></p>
+        <p class="mt-4 text-white/60 text-sm leading-relaxed">A friendly atmosphere for members, guests and visitors - for any occasion. Proudly serving our community since 1919.</p>
+        <p class="mt-4 text-white/60 text-sm italic">"Meet people, share stories, have a laugh and help out in your community."</p>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Explore</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li><a class="hover:text-poppy-light" href="about.html">About &amp; History</a></li>
+          <li><a class="hover:text-poppy-light" href="facilities.html">Facilities &amp; Venue Hire</a></li>
+          <li><a class="hover:text-poppy-light" href="restaurant.html">The Spitfire on Victoria</a></li>
+          <li><a class="hover:text-poppy-light" href="events.html">Events</a></li>
+          <li><a class="hover:text-poppy-light" href="news.html">News</a></li>
+          <li><a class="hover:text-poppy-light" href="membership.html">Join / Renew Membership</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Visit Us</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li>82 Victoria Street<br>Rangiora, Canterbury 7400</li>
+          <li><a class="hover:text-poppy-light" href="tel:+6433137123">03 313 7123</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rangiorarsa@gmail.com">rangiorarsa@gmail.com</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rgarsafunctions@gmail.com">rgarsafunctions@gmail.com</a> <span class="text-white/40">(functions)</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Hours</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li class="flex justify-between gap-4"><span>Mon &ndash; Sat</span><span>10.30am &ndash; 11.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Sunday</span><span>11.00am &ndash; 10.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Bar meals</span><span>Daily from 11.30am</span></li>
+          <li class="flex justify-between gap-4"><span>Restaurant</span><span>11.30am &ndash; 8.00pm</span></li>
+        </ul>
+        <a href="membership.html" class="btn-primary mt-6 text-sm">Join Now</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/45 text-xs">
+        <p>&copy; <span data-year>2026</span> Rangiora RSA Club (Inc). All rights reserved.</p>
+        <p class="flex items-center gap-2">Built by <img src="assets/img/openflow-wordmark.png" alt="OpenFlow" class="h-5 w-auto"><span class="text-white/45">&middot; Digital without limits</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-poppy text-white shadow-lg shadow-poppy/40 flex items-center justify-center hover:bg-poppy-dark" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

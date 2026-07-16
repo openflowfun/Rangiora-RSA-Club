@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & History | Rangiora RSA Club</title>
+  <meta name="description" content="The story of the Rangiora Returned Services Association - founded 28 July 1919, chartered in 1972, extended with a $4M redevelopment in 2016, and now over 4,000 members strong.">
+  <meta property="og:title" content="About & History | Rangiora RSA Club">
+  <meta property="og:description" content="The story of the Rangiora Returned Services Association - founded 28 July 1919, chartered in 1972, extended with a $4M redevelopment in 2016, and now over 4,000 members strong.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          poppy: { DEFAULT: '#C41E3A', dark: '#9A1830', light: '#E8556E' },
+          navy:  { DEFAULT: '#1B2A41', dark: '#111C2E', light: '#2C3E5C' },
+          cream: { DEFAULT: '#FAF6F0', dark: '#F0E9DE' }
+        },
+        fontFamily: { display: ['"Playfair Display"','serif'], body: ['Inter','system-ui','sans-serif'] }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="font-body text-navy bg-cream">
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="bg-navy text-white/90 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-9">
+      <p class="hidden sm:block">Open 7 days &middot; Mon&ndash;Sat 10.30am&ndash;11pm &middot; Sun 11am&ndash;10pm</p>
+      <div class="flex items-center gap-5 ml-auto">
+        <a href="tel:+6433137123" class="hover:text-white font-medium">03 313 7123</a>
+        <a href="mailto:rangiorarsa@gmail.com" class="hidden md:inline hover:text-white">rangiorarsa@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+    <nav class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Rangiora RSA Club home">
+        <img src="assets/img/RSA-club-logo.webp" alt="Rangiora RSA Club logo" class="h-14 w-auto rounded-sm">
+        <span class="leading-tight">
+          <span class="font-display font-bold text-xl block whitespace-nowrap">Rangiora RSA Club</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-poppy font-bold">Est. 1919</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 font-medium">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link active" href="about.html">About</a></li>
+        <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+        <li><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+        <li><a class="nav-link" href="events.html">Events</a></li>
+        <li><a class="nav-link" href="news.html">News</a></li>
+        <li class="relative group">
+          <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">More
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="contact.html" class="btn-ghost text-sm">Visit Us</a>
+        <a href="membership.html" class="btn-primary text-sm">Join Now</a>
+      </div>
+      <button id="menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-cream" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg class="icon-open w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close hidden w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M6 18 18 6"/></svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-black/5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <div class="px-6 py-6 space-y-1 font-medium text-lg">
+        <a class="block py-2" href="index.html">Home</a>
+        <a class="block py-2 text-poppy" href="about.html">About</a>
+        <a class="block py-2" href="facilities.html">Facilities</a>
+        <a class="block py-2" href="restaurant.html">Restaurant</a>
+        <a class="block py-2" href="membership.html">Membership</a>
+        <a class="block py-2" href="events.html">Events</a>
+        <a class="block py-2" href="news.html">News</a>
+        <a class="block py-2" href="gallery.html">Gallery</a>
+        <a class="block py-2" href="board.html">Board</a>
+        <a class="block py-2" href="faq.html">FAQs</a>
+        <a class="block py-2" href="contact.html">Contact</a>
+        <a class="btn-primary w-full mt-4" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+<main id="content">
+
+    <!-- Page hero -->
+    <section class="relative py-32 overflow-hidden">
+      <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=80" alt="Historic hall interior with warm lighting" loading="lazy">
+      <div class="absolute inset-0 bg-navy/80"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 text-white">
+        <p class="eyebrow text-poppy-light">Since 1919</p>
+        <h1 class="font-display text-5xl sm:text-6xl font-bold mt-3">Our Story</h1>
+        <p class="mt-5 max-w-2xl text-white/80 text-lg">More than a century of service, camaraderie and community in Rangiora and the wider Waimakariri District.</p>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-24">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <p class="reveal eyebrow poppy-divider">Rangiora Returned Services Association Inc.</p>
+        <h2 class="reveal font-display text-4xl font-bold mt-4">Born from service, built for community</h2>
+        <p class="reveal mt-6 text-navy/75 text-lg leading-relaxed">
+          Early records of the Association have been lost, but it is known that on <strong>28 July 1919</strong> a meeting
+          was held to form a branch of the Returned Soldiers' Association, presided over by the Mayor,
+          Mr C.&nbsp;I.&nbsp;Jennings. The branch was formed to include <strong>Sefton, Ashley Bank, Loburn, Fernside and Cust</strong> -
+          and with more than 100 members it quickly became a separate, incorporated Association.
+        </p>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="pb-24">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="timeline space-y-12 md:space-y-16">
+
+          <div class="relative md:grid md:grid-cols-2 md:gap-16">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="reveal pl-12 md:pl-0 md:text-right">
+              <p class="font-display text-3xl font-bold text-poppy">1919</p>
+              <h3 class="font-bold text-xl mt-1">The Association is founded</h3>
+              <p class="mt-2 text-navy/70">28 July: the founding meeting is held. On 20 October the Secretary advises the Registrar of Incorporated Societies that, with over 100 members, a separate Association will be formed. Incorporation is lodged on 5 December 1919.</p>
+            </div>
+          </div>
+
+          <div class="relative md:grid md:grid-cols-2 md:gap-16">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="reveal pl-12 md:pl-0 md:col-start-2">
+              <p class="font-display text-3xl font-bold text-poppy">1934 &ndash; 1969</p>
+              <h3 class="font-bold text-xl mt-1">Generations of service</h3>
+              <p class="mt-2 text-navy/70">Membership stands at 138 in 1934. By 1969 the roll includes 56 WWI members, 282 WWII members and 12 honorary members - and by resolution, all 56 WWI members are conferred with Life Membership.</p>
+            </div>
+          </div>
+
+          <div class="relative md:grid md:grid-cols-2 md:gap-16">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="reveal pl-12 md:pl-0 md:text-right">
+              <p class="font-display text-3xl font-bold text-poppy">1971 &ndash; 1972</p>
+              <h3 class="font-bold text-xl mt-1">The Club is chartered</h3>
+              <p class="mt-2 text-navy/70">A proposal to form a Chartered Club is tabled at the 1971 AGM. A postal vote returns 181 members in favour. After delays - including objections from local publicans - the Charter is granted in June 1972 and the <strong>Rangiora RSA Club</strong> is formed.</p>
+            </div>
+          </div>
+
+          <div class="relative md:grid md:grid-cols-2 md:gap-16">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="reveal pl-12 md:pl-0 md:col-start-2">
+              <p class="font-display text-3xl font-bold text-poppy">1981</p>
+              <h3 class="font-bold text-xl mt-1">Membership opens up</h3>
+              <p class="mt-2 text-navy/70">The first "Service members" are admitted. Previously, membership required overseas service in time of hostilities. Today, anyone who has taken the Oath of Allegiance and served in the Armed Forces at any time - including compulsory military training, National Service, Territorials, Regular Force and Police - is eligible.</p>
+            </div>
+          </div>
+
+          <div class="relative md:grid md:grid-cols-2 md:gap-16">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="reveal pl-12 md:pl-0 md:text-right">
+              <p class="font-display text-3xl font-bold text-poppy">2010</p>
+              <h3 class="font-bold text-xl mt-1">Growth after the earthquakes</h3>
+              <p class="mt-2 text-navy/70">Following the Canterbury earthquakes, the club grows to become one of the best RSA Clubs in New Zealand.</p>
+            </div>
+          </div>
+
+          <div class="relative md:grid md:grid-cols-2 md:gap-16">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="reveal pl-12 md:pl-0 md:col-start-2">
+              <p class="font-display text-3xl font-bold text-poppy">2016</p>
+              <h3 class="font-bold text-xl mt-1">$4 million extension</h3>
+              <p class="mt-2 text-navy/70">The club committee invests $4M to extend and modernise the building - two large private function rooms, a large gaming room with 18 modern machines, a sports area with pool and darts, Sky TV, ATM and TAB facilities.</p>
+            </div>
+          </div>
+
+          <div class="relative md:grid md:grid-cols-2 md:gap-16">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="reveal pl-12 md:pl-0 md:text-right">
+              <p class="font-display text-3xl font-bold text-poppy">2020</p>
+              <h3 class="font-bold text-xl mt-1">4,000 members and growing</h3>
+              <p class="mt-2 text-navy/70">Membership grows to over 4,000, with members of all ages - which bodes well for the future. The club takes the Spitfire Restaurant in-house; it is open every day and attracts diners and groups celebrating special occasions.</p>
+            </div>
+          </div>
+
+          <div class="relative md:grid md:grid-cols-2 md:gap-16">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="reveal pl-12 md:pl-0 md:col-start-2">
+              <p class="font-display text-3xl font-bold text-poppy">Today</p>
+              <h3 class="font-bold text-xl mt-1">The club for everyone</h3>
+              <p class="mt-2 text-navy/70">A great community facility attracting business and community groups, families and friends - while continuing to honour and support those who have served.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="bg-white py-24">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="reveal eyebrow poppy-divider">What We Stand For</p>
+          <h2 class="reveal font-display text-4xl font-bold mt-4">Our values</h2>
+        </div>
+        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="reveal card-hover bg-cream rounded-2xl p-8 text-center">
+            <span class="mx-auto w-14 h-14 rounded-full bg-poppy/10 text-poppy flex items-center justify-center"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"><path d="m9.65 16.9.35.35.35-.35a45 45 0 0 0 4.7-4.9c1.25-1.6 2.45-3.6 2.45-5.5A4.75 4.75 0 0 0 10 4.35 4.75 4.75 0 0 0 2.5 6.5c0 1.9 1.2 3.9 2.45 5.5a45 45 0 0 0 4.7 4.9Z"/></svg></span>
+            <h3 class="font-display text-xl font-bold mt-5">Camaraderie</h3>
+            <p class="mt-2 text-navy/70 text-sm">Friendship first - a warm welcome for members, guests and visitors alike.</p>
+          </div>
+          <div class="reveal delay-1 card-hover bg-cream rounded-2xl p-8 text-center">
+            <span class="mx-auto w-14 h-14 rounded-full bg-poppy/10 text-poppy flex items-center justify-center"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM1.5 15.3a4 4 0 0 1 3.4-3.3 5.5 5.5 0 0 0-.85 3.5H2a.75.75 0 0 1-.5-.2ZM14 8a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM15.95 15.5c.09-1.25-.2-2.5-.85-3.5a4 4 0 0 1 3.4 3.3.75.75 0 0 1-.5.2h-2.05ZM10 11a4.5 4.5 0 0 0-4.5 4.5.75.75 0 0 0 .75.75h7.5a.75.75 0 0 0 .75-.75A4.5 4.5 0 0 0 10 11Z"/></svg></span>
+            <h3 class="font-display text-xl font-bold mt-5">Community</h3>
+            <p class="mt-2 text-navy/70 text-sm">Helping out in our community - from Rangiora to the wider Waimakariri District.</p>
+          </div>
+          <div class="reveal delay-2 card-hover bg-cream rounded-2xl p-8 text-center">
+            <span class="mx-auto w-14 h-14 rounded-full bg-poppy/10 text-poppy flex items-center justify-center"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.66 2.24a.75.75 0 0 1 .68 0 12 12 0 0 0 5.9 1.5.75.75 0 0 1 .75.68 12.7 12.7 0 0 1-6.6 12.9.75.75 0 0 1-.78 0 12.7 12.7 0 0 1-6.6-12.9.75.75 0 0 1 .75-.68 12 12 0 0 0 5.9-1.5Z" clip-rule="evenodd"/></svg></span>
+            <h3 class="font-display text-xl font-bold mt-5">Support &amp; Welfare</h3>
+            <p class="mt-2 text-navy/70 text-sm">A dedicated Welfare section supporting veterans, members and their families.</p>
+          </div>
+          <div class="reveal delay-3 card-hover bg-cream rounded-2xl p-8 text-center">
+            <span class="mx-auto w-14 h-14 rounded-full bg-poppy/10 text-poppy flex items-center justify-center"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1a6 6 0 0 0-3.8 10.6c.4.35.65.83.73 1.35l.07.45h6l.07-.45c.08-.52.33-1 .74-1.35A6 6 0 0 0 10 1ZM8.86 15.5l.14.9a1 1 0 0 0 1 .85 1 1 0 0 0 1-.84l.14-.91H8.86Z"/></svg></span>
+            <h3 class="font-display text-xl font-bold mt-5">Remembrance</h3>
+            <p class="mt-2 text-navy/70 text-sm">Honouring all who have served - their service and sacrifice are never forgotten.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ode -->
+    <section class="bg-navy py-24 relative overflow-hidden">
+      <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-poppy/10"></div>
+      <div class="relative max-w-3xl mx-auto px-4 text-center text-white">
+        <p class="reveal font-display text-6xl text-poppy-light leading-none" aria-hidden="true">&#10047;</p>
+        <blockquote class="reveal mt-6 font-display text-2xl sm:text-3xl leading-relaxed italic text-white/90">
+          "They shall grow not old, as we that are left grow old:<br>
+          Age shall not weary them, nor the years condemn.<br>
+          At the going down of the sun and in the morning,<br>
+          We will remember them."
+        </blockquote>
+        <p class="reveal mt-6 text-white/60 text-sm uppercase tracking-widest">The Ode of Remembrance</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="reveal font-display text-4xl font-bold">Be part of the next chapter</h2>
+        <p class="reveal mt-4 text-navy/70 text-lg">Membership is open to all adults - just $30 a year.</p>
+        <div class="reveal mt-8 flex flex-wrap justify-center gap-4">
+          <a href="membership.html" class="btn-primary">Join the Club</a>
+          <a href="board.html" class="btn-ghost">Meet the Board</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy-dark text-white">
+    <div class="h-1 bg-gradient-to-r from-poppy via-poppy-light to-poppy"></div>
+    <div class="max-w-7xl mx-auto px-4 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl font-bold">Rangiora RSA <span class="text-poppy-light">Club</span></p>
+        <p class="mt-4 text-white/60 text-sm leading-relaxed">A friendly atmosphere for members, guests and visitors - for any occasion. Proudly serving our community since 1919.</p>
+        <p class="mt-4 text-white/60 text-sm italic">"Meet people, share stories, have a laugh and help out in your community."</p>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Explore</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li><a class="hover:text-poppy-light" href="about.html">About &amp; History</a></li>
+          <li><a class="hover:text-poppy-light" href="facilities.html">Facilities &amp; Venue Hire</a></li>
+          <li><a class="hover:text-poppy-light" href="restaurant.html">The Spitfire on Victoria</a></li>
+          <li><a class="hover:text-poppy-light" href="events.html">Events</a></li>
+          <li><a class="hover:text-poppy-light" href="news.html">News</a></li>
+          <li><a class="hover:text-poppy-light" href="membership.html">Join / Renew Membership</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Visit Us</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li>82 Victoria Street<br>Rangiora, Canterbury 7400</li>
+          <li><a class="hover:text-poppy-light" href="tel:+6433137123">03 313 7123</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rangiorarsa@gmail.com">rangiorarsa@gmail.com</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rgarsafunctions@gmail.com">rgarsafunctions@gmail.com</a> <span class="text-white/40">(functions)</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Hours</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li class="flex justify-between gap-4"><span>Mon &ndash; Sat</span><span>10.30am &ndash; 11.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Sunday</span><span>11.00am &ndash; 10.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Bar meals</span><span>Daily from 11.30am</span></li>
+          <li class="flex justify-between gap-4"><span>Restaurant</span><span>11.30am &ndash; 8.00pm</span></li>
+        </ul>
+        <a href="membership.html" class="btn-primary mt-6 text-sm">Join Now</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/45 text-xs">
+        <p>&copy; <span data-year>2026</span> Rangiora RSA Club (Inc). All rights reserved.</p>
+        <p class="flex items-center gap-2">Built by <img src="assets/img/openflow-wordmark.png" alt="OpenFlow" class="h-5 w-auto"><span class="text-white/45">&middot; Digital without limits</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-poppy text-white shadow-lg shadow-poppy/40 flex items-center justify-center hover:bg-poppy-dark" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

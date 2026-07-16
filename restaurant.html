@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Spitfire on Victoria - Restaurant | Rangiora RSA Club</title>
+  <meta name="description" content="The Spitfire Restaurant at the Rangiora RSA Club - great food, great service, great value. Open to all guests 7 days a week, 11.30am–8pm. Dine in or takeaway. Bar meals daily from 11.30am.">
+  <meta property="og:title" content="The Spitfire on Victoria - Restaurant | Rangiora RSA Club">
+  <meta property="og:description" content="The Spitfire Restaurant at the Rangiora RSA Club - great food, great service, great value. Open to all guests 7 days a week, 11.30am–8pm. Dine in or takeaway. Bar meals daily from 11.30am.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          poppy: { DEFAULT: '#C41E3A', dark: '#9A1830', light: '#E8556E' },
+          navy:  { DEFAULT: '#1B2A41', dark: '#111C2E', light: '#2C3E5C' },
+          cream: { DEFAULT: '#FAF6F0', dark: '#F0E9DE' }
+        },
+        fontFamily: { display: ['"Playfair Display"','serif'], body: ['Inter','system-ui','sans-serif'] }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="font-body text-navy bg-cream">
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="bg-navy text-white/90 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-9">
+      <p class="hidden sm:block">Open 7 days &middot; Mon&ndash;Sat 10.30am&ndash;11pm &middot; Sun 11am&ndash;10pm</p>
+      <div class="flex items-center gap-5 ml-auto">
+        <a href="tel:+6433137123" class="hover:text-white font-medium">03 313 7123</a>
+        <a href="mailto:rangiorarsa@gmail.com" class="hidden md:inline hover:text-white">rangiorarsa@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+    <nav class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Rangiora RSA Club home">
+        <img src="assets/img/RSA-club-logo.webp" alt="Rangiora RSA Club logo" class="h-14 w-auto rounded-sm">
+        <span class="leading-tight">
+          <span class="font-display font-bold text-xl block whitespace-nowrap">Rangiora RSA Club</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-poppy font-bold">Est. 1919</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 font-medium">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+        <li><a class="nav-link active" href="restaurant.html">Restaurant</a></li>
+        <li><a class="nav-link" href="events.html">Events</a></li>
+        <li><a class="nav-link" href="news.html">News</a></li>
+        <li class="relative group">
+          <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">More
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="contact.html" class="btn-ghost text-sm">Visit Us</a>
+        <a href="membership.html" class="btn-primary text-sm">Join Now</a>
+      </div>
+      <button id="menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-cream" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg class="icon-open w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close hidden w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M6 18 18 6"/></svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-black/5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <div class="px-6 py-6 space-y-1 font-medium text-lg">
+        <a class="block py-2" href="index.html">Home</a>
+        <a class="block py-2" href="about.html">About</a>
+        <a class="block py-2" href="facilities.html">Facilities</a>
+        <a class="block py-2 text-poppy" href="restaurant.html">Restaurant</a>
+        <a class="block py-2" href="membership.html">Membership</a>
+        <a class="block py-2" href="events.html">Events</a>
+        <a class="block py-2" href="news.html">News</a>
+        <a class="block py-2" href="gallery.html">Gallery</a>
+        <a class="block py-2" href="board.html">Board</a>
+        <a class="block py-2" href="faq.html">FAQs</a>
+        <a class="block py-2" href="contact.html">Contact</a>
+        <a class="btn-primary w-full mt-4" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+<main id="content">
+
+    <!-- Page hero -->
+    <section class="relative py-36 overflow-hidden">
+      <img class="kenburns absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=80" alt="Chef carefully plating a restaurant meal" loading="lazy">
+      <div class="hero-overlay absolute inset-0"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 text-white text-center">
+        <p class="eyebrow text-poppy-light">Dine In or Takeaway</p>
+        <h1 class="font-display text-5xl sm:text-7xl font-bold mt-3">The Spitfire <span class="italic text-poppy-light">on Victoria</span></h1>
+        <p class="mt-5 max-w-2xl mx-auto text-white/85 text-xl">Great food. Great service. Great value.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="#menu" class="btn-primary">View Sample Menu</a>
+          <a href="tel:+6433137123" class="btn-secondary">Book a Table: 03 313 7123</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info strip -->
+    <section class="bg-navy text-white">
+      <div class="max-w-7xl mx-auto px-4 py-10 grid sm:grid-cols-3 gap-8 text-center">
+        <div class="reveal"><p class="eyebrow text-poppy-light">Open</p><p class="mt-2 font-semibold">7 days a week &middot; all guests welcome</p></div>
+        <div class="reveal delay-1"><p class="eyebrow text-poppy-light">Restaurant</p><p class="mt-2 font-semibold">Daily 11.30am &ndash; 8.00pm</p></div>
+        <div class="reveal delay-2"><p class="eyebrow text-poppy-light">Bar Meals</p><p class="mt-2 font-semibold">Daily from 11.30am</p></div>
+      </div>
+    </section>
+
+    <!-- About the restaurant -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal-left">
+          <p class="eyebrow">Our Restaurant</p>
+          <h2 class="font-display text-4xl font-bold mt-3">Run by the club, loved by the community</h2>
+          <p class="mt-5 text-navy/75 leading-relaxed">The Spitfire Restaurant is run in-house by the Rangiora RSA Club. It's open every day and attracts diners and groups celebrating their special occasions - you don't need to be a member to enjoy it.</p>
+          <p class="mt-4 text-navy/75 leading-relaxed">Whether it's a quick lunch, a family dinner, or a table for a milestone birthday, the Spitfire team will look after you. Takeaway available too.</p>
+          <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+            <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-display text-2xl font-bold text-poppy">7</p><p class="text-xs text-navy/60 mt-1 uppercase tracking-wider">Days a week</p></div>
+            <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-display text-2xl font-bold text-poppy">All</p><p class="text-xs text-navy/60 mt-1 uppercase tracking-wider">Guests welcome</p></div>
+            <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-display text-2xl font-bold text-poppy">200</p><p class="text-xs text-navy/60 mt-1 uppercase tracking-wider">Seat functions</p></div>
+          </div>
+        </div>
+        <div class="reveal-right grid grid-cols-2 gap-4">
+          <div class="img-zoom rounded-2xl shadow-lg"><img class="w-full h-64 object-cover rounded-2xl" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80" alt="Grilled steak dinner with sides" loading="lazy"></div>
+          <div class="img-zoom rounded-2xl shadow-lg mt-8"><img class="w-full h-64 object-cover rounded-2xl" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Freshly made pizza" loading="lazy"></div>
+          <div class="img-zoom rounded-2xl shadow-lg"><img class="w-full h-64 object-cover rounded-2xl" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80" alt="Pan-seared salmon with vegetables" loading="lazy"></div>
+          <div class="img-zoom rounded-2xl shadow-lg mt-8"><img class="w-full h-64 object-cover rounded-2xl" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80" alt="Dessert with ice cream" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sample menu -->
+    <section id="menu" class="bg-white py-24">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="text-center">
+          <p class="reveal eyebrow poppy-divider">Taste of the Spitfire</p>
+          <h2 class="reveal font-display text-4xl font-bold mt-4">Sample Menu</h2>
+          <p class="reveal mt-4 text-navy/60 text-sm max-w-xl mx-auto">Menus change with the seasons - this is a taste of the style of food on offer. Phone <a href="tel:+6433137123" class="text-poppy font-semibold hover:underline">03 313 7123</a> for today's menu and specials.
+          <!-- EDIT ME: replace these sample items with the club's current menu -->
+          </p>
+        </div>
+        <div class="mt-14 grid md:grid-cols-2 gap-x-16 gap-y-12">
+          <div class="reveal">
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3">To Start</h3>
+            <ul class="mt-5 space-y-5">
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Soup of the Day</p><p class="text-sm text-navy/60">With warm crusty bread</p></div><span class="font-display font-bold shrink-0">$12</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Garlic Bread</p><p class="text-sm text-navy/60">Toasted, buttery and generous</p></div><span class="font-display font-bold shrink-0">$9</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Seafood Chowder</p><p class="text-sm text-navy/60">Creamy, loaded with local seafood</p></div><span class="font-display font-bold shrink-0">$16</span></li>
+            </ul>
+          </div>
+          <div class="reveal delay-1">
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3">Club Classics</h3>
+            <ul class="mt-5 space-y-5">
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Fish &amp; Chips</p><p class="text-sm text-navy/60">Beer-battered, salad, tartare</p></div><span class="font-display font-bold shrink-0">$24</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Roast of the Day</p><p class="text-sm text-navy/60">With seasonal vegetables &amp; gravy</p></div><span class="font-display font-bold shrink-0">$25</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Ribeye Steak</p><p class="text-sm text-navy/60">Cooked your way, fries &amp; salad</p></div><span class="font-display font-bold shrink-0">$34</span></li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3">Lighter &amp; Littler</h3>
+            <ul class="mt-5 space-y-5">
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Spitfire Burger</p><p class="text-sm text-navy/60">Beef, bacon, cheese &amp; fries</p></div><span class="font-display font-bold shrink-0">$22</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Caesar Salad</p><p class="text-sm text-navy/60">Add chicken or bacon</p></div><span class="font-display font-bold shrink-0">$19</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Kids' Meals</p><p class="text-sm text-navy/60">With ice cream to finish</p></div><span class="font-display font-bold shrink-0">$12</span></li>
+            </ul>
+          </div>
+          <div class="reveal delay-1">
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3">Sweet Finish</h3>
+            <ul class="mt-5 space-y-5">
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Sticky Date Pudding</p><p class="text-sm text-navy/60">Butterscotch sauce &amp; cream</p></div><span class="font-display font-bold shrink-0">$13</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Pavlova</p><p class="text-sm text-navy/60">A Kiwi classic with fresh fruit</p></div><span class="font-display font-bold shrink-0">$13</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Cheesecake of the Week</p><p class="text-sm text-navy/60">Ask our team what's baking</p></div><span class="font-display font-bold shrink-0">$13</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="relative py-24 overflow-hidden">
+      <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=2000&q=80" alt="Beautifully set dinner table" loading="lazy">
+      <div class="absolute inset-0 bg-navy/80"></div>
+      <div class="relative z-10 max-w-3xl mx-auto px-4 text-center text-white">
+        <h2 class="reveal font-display text-4xl font-bold">Celebrating something special?</h2>
+        <p class="reveal mt-4 text-white/80 text-lg">The Spitfire caters for groups and special occasions - and our private function rooms seat 12 to 200.</p>
+        <div class="reveal mt-8 flex flex-wrap justify-center gap-4">
+          <a href="tel:+6433137123" class="btn-primary">Call 03 313 7123</a>
+          <a href="facilities.html#enquiry" class="btn-secondary">Function Enquiry</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy-dark text-white">
+    <div class="h-1 bg-gradient-to-r from-poppy via-poppy-light to-poppy"></div>
+    <div class="max-w-7xl mx-auto px-4 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl font-bold">Rangiora RSA <span class="text-poppy-light">Club</span></p>
+        <p class="mt-4 text-white/60 text-sm leading-relaxed">A friendly atmosphere for members, guests and visitors - for any occasion. Proudly serving our community since 1919.</p>
+        <p class="mt-4 text-white/60 text-sm italic">"Meet people, share stories, have a laugh and help out in your community."</p>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Explore</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li><a class="hover:text-poppy-light" href="about.html">About &amp; History</a></li>
+          <li><a class="hover:text-poppy-light" href="facilities.html">Facilities &amp; Venue Hire</a></li>
+          <li><a class="hover:text-poppy-light" href="restaurant.html">The Spitfire on Victoria</a></li>
+          <li><a class="hover:text-poppy-light" href="events.html">Events</a></li>
+          <li><a class="hover:text-poppy-light" href="news.html">News</a></li>
+          <li><a class="hover:text-poppy-light" href="membership.html">Join / Renew Membership</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Visit Us</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li>82 Victoria Street<br>Rangiora, Canterbury 7400</li>
+          <li><a class="hover:text-poppy-light" href="tel:+6433137123">03 313 7123</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rangiorarsa@gmail.com">rangiorarsa@gmail.com</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rgarsafunctions@gmail.com">rgarsafunctions@gmail.com</a> <span class="text-white/40">(functions)</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Hours</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li class="flex justify-between gap-4"><span>Mon &ndash; Sat</span><span>10.30am &ndash; 11.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Sunday</span><span>11.00am &ndash; 10.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Bar meals</span><span>Daily from 11.30am</span></li>
+          <li class="flex justify-between gap-4"><span>Restaurant</span><span>11.30am &ndash; 8.00pm</span></li>
+        </ul>
+        <a href="membership.html" class="btn-primary mt-6 text-sm">Join Now</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/45 text-xs">
+        <p>&copy; <span data-year>2026</span> Rangiora RSA Club (Inc). All rights reserved.</p>
+        <p class="flex items-center gap-2">Built by <img src="assets/img/openflow-wordmark.png" alt="OpenFlow" class="h-5 w-auto"><span class="text-white/45">&middot; Digital without limits</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-poppy text-white shadow-lg shadow-poppy/40 flex items-center justify-center hover:bg-poppy-dark" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

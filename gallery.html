@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Rangiora RSA Club</title>
+  <meta name="description" content="A look inside the Rangiora RSA Club - the lounge bar, courtyard, Spitfire Restaurant, function rooms and club life.">
+  <meta property="og:title" content="Gallery | Rangiora RSA Club">
+  <meta property="og:description" content="A look inside the Rangiora RSA Club - the lounge bar, courtyard, Spitfire Restaurant, function rooms and club life.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          poppy: { DEFAULT: '#C41E3A', dark: '#9A1830', light: '#E8556E' },
+          navy:  { DEFAULT: '#1B2A41', dark: '#111C2E', light: '#2C3E5C' },
+          cream: { DEFAULT: '#FAF6F0', dark: '#F0E9DE' }
+        },
+        fontFamily: { display: ['"Playfair Display"','serif'], body: ['Inter','system-ui','sans-serif'] }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="font-body text-navy bg-cream">
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="bg-navy text-white/90 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-9">
+      <p class="hidden sm:block">Open 7 days &middot; Mon&ndash;Sat 10.30am&ndash;11pm &middot; Sun 11am&ndash;10pm</p>
+      <div class="flex items-center gap-5 ml-auto">
+        <a href="tel:+6433137123" class="hover:text-white font-medium">03 313 7123</a>
+        <a href="mailto:rangiorarsa@gmail.com" class="hidden md:inline hover:text-white">rangiorarsa@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+    <nav class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Rangiora RSA Club home">
+        <img src="assets/img/RSA-club-logo.webp" alt="Rangiora RSA Club logo" class="h-14 w-auto rounded-sm">
+        <span class="leading-tight">
+          <span class="font-display font-bold text-xl block whitespace-nowrap">Rangiora RSA Club</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-poppy font-bold">Est. 1919</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 font-medium">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+        <li><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+        <li><a class="nav-link" href="events.html">Events</a></li>
+        <li><a class="nav-link" href="news.html">News</a></li>
+        <li class="relative group">
+          <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">More
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="contact.html" class="btn-ghost text-sm">Visit Us</a>
+        <a href="membership.html" class="btn-primary text-sm">Join Now</a>
+      </div>
+      <button id="menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-cream" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg class="icon-open w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close hidden w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M6 18 18 6"/></svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-black/5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <div class="px-6 py-6 space-y-1 font-medium text-lg">
+        <a class="block py-2" href="index.html">Home</a>
+        <a class="block py-2" href="about.html">About</a>
+        <a class="block py-2" href="facilities.html">Facilities</a>
+        <a class="block py-2" href="restaurant.html">Restaurant</a>
+        <a class="block py-2" href="membership.html">Membership</a>
+        <a class="block py-2" href="events.html">Events</a>
+        <a class="block py-2" href="news.html">News</a>
+        <a class="block py-2 text-poppy" href="gallery.html">Gallery</a>
+        <a class="block py-2" href="board.html">Board</a>
+        <a class="block py-2" href="faq.html">FAQs</a>
+        <a class="block py-2" href="contact.html">Contact</a>
+        <a class="btn-primary w-full mt-4" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+<main id="content">
+
+    <!-- Page hero -->
+    <section class="relative py-32 overflow-hidden bg-navy">
+      <div class="absolute -left-24 -top-24 w-96 h-96 rounded-full bg-poppy/15"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 text-white">
+        <p class="eyebrow text-poppy-light">A Look Inside</p>
+        <h1 class="font-display text-5xl sm:text-6xl font-bold mt-3">Gallery</h1>
+        <p class="mt-5 max-w-2xl text-white/80 text-lg">The bar, the courtyard, the Spitfire and the people who make the club what it is.</p>
+      </div>
+    </section>
+
+    <!-- Grid -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <p class="reveal text-center text-navy/55 text-sm max-w-2xl mx-auto mb-10">
+          <!-- EDIT ME: replace these placeholder photos with the club's own photos.
+               Keep the data-caption text up to date - it shows in the lightbox. -->
+          These are placeholder photos - click any image to view it full size.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="The main lounge bar - the heart of the club" data-full="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=700&q=70" alt="Main lounge bar with warm lighting" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Drinks at the bar - members, guests and visitors welcome" data-full="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=700&q=70" alt="Bartender pouring drinks" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="The Spitfire on Victoria - open 7 days" data-full="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=70" alt="Restaurant dining area" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Great food, great service, great value" data-full="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=70" alt="Chef plating a meal" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="The 200-seat main function room" data-full="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=700&q=70" alt="Function room set for an event" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Celebrations and special occasions" data-full="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=700&q=70" alt="Friends celebrating at a dinner table" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Catch-ups in the courtyard" data-full="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=70" alt="Friends laughing together" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Live entertainment nights" data-full="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=700&q=70" alt="Live entertainment with lights" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Steak night at the Spitfire" data-full="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=700&q=70" alt="Steak dinner" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Family meals - kids welcome in the restaurant" data-full="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=700&q=70" alt="Set dinner table" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Meetings and conferences in our private rooms" data-full="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=700&q=70" alt="Business meeting event" loading="lazy">
+          </button>
+          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Big games live on the big screens" data-full="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1600&q=80">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=700&q=70" alt="Crowd cheering at live sport" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-navy-dark/90 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button data-lb-close class="absolute top-5 right-5 text-white/80 hover:text-white p-2" aria-label="Close">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M6 18 18 6"/></svg>
+      </button>
+      <button data-lb-prev class="absolute left-3 sm:left-8 text-white/80 hover:text-white p-2" aria-label="Previous image">
+        <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <figure class="max-w-5xl w-full text-center">
+        <img class="mx-auto rounded-xl" src="" alt="">
+        <figcaption id="lightbox-caption" class="mt-4 text-white/80 text-sm"></figcaption>
+      </figure>
+      <button data-lb-next class="absolute right-3 sm:right-8 text-white/80 hover:text-white p-2" aria-label="Next image">
+        <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- CTA -->
+    <section class="bg-white py-20 text-center">
+      <div class="max-w-2xl mx-auto px-4">
+        <h2 class="reveal font-display text-3xl font-bold">Come and see it in person</h2>
+        <p class="reveal mt-3 text-navy/70">82 Victoria Street, Rangiora - open 7 days.</p>
+        <div class="reveal mt-7 flex flex-wrap justify-center gap-4">
+          <a href="contact.html" class="btn-navy">Plan Your Visit</a>
+          <a href="membership.html" class="btn-primary">Join the Club</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy-dark text-white">
+    <div class="h-1 bg-gradient-to-r from-poppy via-poppy-light to-poppy"></div>
+    <div class="max-w-7xl mx-auto px-4 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl font-bold">Rangiora RSA <span class="text-poppy-light">Club</span></p>
+        <p class="mt-4 text-white/60 text-sm leading-relaxed">A friendly atmosphere for members, guests and visitors - for any occasion. Proudly serving our community since 1919.</p>
+        <p class="mt-4 text-white/60 text-sm italic">"Meet people, share stories, have a laugh and help out in your community."</p>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Explore</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li><a class="hover:text-poppy-light" href="about.html">About &amp; History</a></li>
+          <li><a class="hover:text-poppy-light" href="facilities.html">Facilities &amp; Venue Hire</a></li>
+          <li><a class="hover:text-poppy-light" href="restaurant.html">The Spitfire on Victoria</a></li>
+          <li><a class="hover:text-poppy-light" href="events.html">Events</a></li>
+          <li><a class="hover:text-poppy-light" href="news.html">News</a></li>
+          <li><a class="hover:text-poppy-light" href="membership.html">Join / Renew Membership</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Visit Us</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li>82 Victoria Street<br>Rangiora, Canterbury 7400</li>
+          <li><a class="hover:text-poppy-light" href="tel:+6433137123">03 313 7123</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rangiorarsa@gmail.com">rangiorarsa@gmail.com</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rgarsafunctions@gmail.com">rgarsafunctions@gmail.com</a> <span class="text-white/40">(functions)</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Hours</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li class="flex justify-between gap-4"><span>Mon &ndash; Sat</span><span>10.30am &ndash; 11.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Sunday</span><span>11.00am &ndash; 10.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Bar meals</span><span>Daily from 11.30am</span></li>
+          <li class="flex justify-between gap-4"><span>Restaurant</span><span>11.30am &ndash; 8.00pm</span></li>
+        </ul>
+        <a href="membership.html" class="btn-primary mt-6 text-sm">Join Now</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/45 text-xs">
+        <p>&copy; <span data-year>2026</span> Rangiora RSA Club (Inc). All rights reserved.</p>
+        <p class="flex items-center gap-2">Built by <img src="assets/img/openflow-wordmark.png" alt="OpenFlow" class="h-5 w-auto"><span class="text-white/45">&middot; Digital without limits</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-poppy text-white shadow-lg shadow-poppy/40 flex items-center justify-center hover:bg-poppy-dark" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

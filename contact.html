@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Find Us | Rangiora RSA Club</title>
+  <meta name="description" content="Contact the Rangiora RSA Club - 82 Victoria Street, Rangiora, Canterbury 7400. Phone 03 313 7123. General enquiries rangiorarsa@gmail.com, functions rgarsafunctions@gmail.com.">
+  <meta property="og:title" content="Contact & Find Us | Rangiora RSA Club">
+  <meta property="og:description" content="Contact the Rangiora RSA Club - 82 Victoria Street, Rangiora, Canterbury 7400. Phone 03 313 7123. General enquiries rangiorarsa@gmail.com, functions rgarsafunctions@gmail.com.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          poppy: { DEFAULT: '#C41E3A', dark: '#9A1830', light: '#E8556E' },
+          navy:  { DEFAULT: '#1B2A41', dark: '#111C2E', light: '#2C3E5C' },
+          cream: { DEFAULT: '#FAF6F0', dark: '#F0E9DE' }
+        },
+        fontFamily: { display: ['"Playfair Display"','serif'], body: ['Inter','system-ui','sans-serif'] }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="font-body text-navy bg-cream">
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="bg-navy text-white/90 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-9">
+      <p class="hidden sm:block">Open 7 days &middot; Mon&ndash;Sat 10.30am&ndash;11pm &middot; Sun 11am&ndash;10pm</p>
+      <div class="flex items-center gap-5 ml-auto">
+        <a href="tel:+6433137123" class="hover:text-white font-medium">03 313 7123</a>
+        <a href="mailto:rangiorarsa@gmail.com" class="hidden md:inline hover:text-white">rangiorarsa@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+    <nav class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Rangiora RSA Club home">
+        <img src="assets/img/RSA-club-logo.webp" alt="Rangiora RSA Club logo" class="h-14 w-auto rounded-sm">
+        <span class="leading-tight">
+          <span class="font-display font-bold text-xl block whitespace-nowrap">Rangiora RSA Club</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-poppy font-bold">Est. 1919</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 font-medium">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+        <li><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+        <li><a class="nav-link" href="events.html">Events</a></li>
+        <li><a class="nav-link" href="news.html">News</a></li>
+        <li class="relative group">
+          <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">More
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="contact.html" class="btn-ghost text-sm">Visit Us</a>
+        <a href="membership.html" class="btn-primary text-sm">Join Now</a>
+      </div>
+      <button id="menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-cream" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg class="icon-open w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close hidden w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M6 18 18 6"/></svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-black/5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <div class="px-6 py-6 space-y-1 font-medium text-lg">
+        <a class="block py-2" href="index.html">Home</a>
+        <a class="block py-2" href="about.html">About</a>
+        <a class="block py-2" href="facilities.html">Facilities</a>
+        <a class="block py-2" href="restaurant.html">Restaurant</a>
+        <a class="block py-2" href="membership.html">Membership</a>
+        <a class="block py-2" href="events.html">Events</a>
+        <a class="block py-2" href="news.html">News</a>
+        <a class="block py-2" href="gallery.html">Gallery</a>
+        <a class="block py-2" href="board.html">Board</a>
+        <a class="block py-2" href="faq.html">FAQs</a>
+        <a class="block py-2 text-poppy" href="contact.html">Contact</a>
+        <a class="btn-primary w-full mt-4" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+<main id="content">
+
+    <!-- Page hero -->
+    <section class="relative py-32 overflow-hidden bg-navy">
+      <div class="absolute -left-24 -bottom-24 w-96 h-96 rounded-full bg-poppy/15"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 text-white">
+        <p class="eyebrow text-poppy-light">We'd Love to Hear From You</p>
+        <h1 class="font-display text-5xl sm:text-6xl font-bold mt-3">Contact Us</h1>
+        <p class="mt-5 max-w-2xl text-white/80 text-lg">Call in, phone or send us a message - we're open 7 days.</p>
+      </div>
+    </section>
+
+    <!-- Contact cards -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="reveal card-hover bg-white rounded-2xl p-7 text-center shadow-sm">
+          <span class="mx-auto w-14 h-14 rounded-full bg-poppy/10 text-poppy flex items-center justify-center"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="m9.69 18.93.03.01.01.01a.75.75 0 0 0 .54 0l.01-.01.03-.01.1-.06a12.6 12.6 0 0 0 3.05-2.4C15.21 14.6 17 11.64 17 8A7 7 0 1 0 3 8c0 3.64 1.79 6.6 3.54 8.47a12.6 12.6 0 0 0 3.05 2.4l.1.06ZM10 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" clip-rule="evenodd"/></svg></span>
+          <h2 class="font-bold mt-4">Visit</h2>
+          <p class="mt-2 text-sm text-navy/70">82 Victoria Street<br>Rangiora, Canterbury 7400<br>New Zealand</p>
+        </div>
+        <div class="reveal delay-1 card-hover bg-white rounded-2xl p-7 text-center shadow-sm">
+          <span class="mx-auto w-14 h-14 rounded-full bg-poppy/10 text-poppy flex items-center justify-center"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.15a1.5 1.5 0 0 1 1.46 1.17l.7 3.08a1.5 1.5 0 0 1-.44 1.42l-.66.62a.75.75 0 0 0-.16.86 11 11 0 0 0 5.3 5.3.75.75 0 0 0 .86-.16l.62-.66a1.5 1.5 0 0 1 1.42-.44l3.08.7A1.5 1.5 0 0 1 18 15.35v1.15a1.5 1.5 0 0 1-1.5 1.5H15C7.8 18 2 12.2 2 5V3.5Z" clip-rule="evenodd"/></svg></span>
+          <h2 class="font-bold mt-4">Phone</h2>
+          <p class="mt-2 text-sm text-navy/70"><a class="text-poppy font-semibold hover:underline" href="tel:+6433137123">03 313 7123</a><br>Restaurant bookings, courtesy van<br>&amp; general enquiries</p>
+        </div>
+        <div class="reveal delay-2 card-hover bg-white rounded-2xl p-7 text-center shadow-sm">
+          <span class="mx-auto w-14 h-14 rounded-full bg-poppy/10 text-poppy flex items-center justify-center"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M3 4a2 2 0 0 0-2 2v1.16l8.44 4.34c.35.18.77.18 1.12 0L19 7.16V6a2 2 0 0 0-2-2H3Z"/><path d="m19 8.84-7.77 4a3.25 3.25 0 0 1-2.46 0L1 8.84V14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.84Z"/></svg></span>
+          <h2 class="font-bold mt-4">Email</h2>
+          <p class="mt-2 text-sm text-navy/70">General: <a class="text-poppy font-semibold hover:underline break-all" href="mailto:rangiorarsa@gmail.com">rangiorarsa@gmail.com</a><br>Functions: <a class="text-poppy font-semibold hover:underline break-all" href="mailto:rgarsafunctions@gmail.com">rgarsafunctions@gmail.com</a></p>
+        </div>
+        <div class="reveal delay-3 card-hover bg-white rounded-2xl p-7 text-center shadow-sm">
+          <span class="mx-auto w-14 h-14 rounded-full bg-poppy/10 text-poppy flex items-center justify-center"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .27.14.52.38.65l3.5 2a.75.75 0 1 0 .74-1.3l-3.12-1.78V5Z" clip-rule="evenodd"/></svg></span>
+          <h2 class="font-bold mt-4">Hours</h2>
+          <p class="mt-2 text-sm text-navy/70">Mon&ndash;Sat: 10.30am&ndash;11.00pm<br>Sun: 11.00am&ndash;10.00pm<br>Restaurant: 11.30am&ndash;8.00pm daily</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form + map -->
+    <section class="pb-24">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
+        <div class="reveal-left">
+          <p class="eyebrow">Send a Message</p>
+          <h2 class="font-display text-4xl font-bold mt-3">Drop us a line</h2>
+          <!-- Formspree: replace YOUR_FORM_ID with your form ID (see README.md) -->
+          <form class="mt-8 grid sm:grid-cols-2 gap-5 bg-white rounded-2xl p-8 shadow-lg shadow-navy/5" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-formspree>
+            <div>
+              <label class="form-label" for="c-first">First name *</label>
+              <input class="form-input" id="c-first" name="first_name" type="text" required autocomplete="given-name">
+            </div>
+            <div>
+              <label class="form-label" for="c-last">Last name *</label>
+              <input class="form-input" id="c-last" name="last_name" type="text" required autocomplete="family-name">
+            </div>
+            <div>
+              <label class="form-label" for="c-email">Email *</label>
+              <input class="form-input" id="c-email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div>
+              <label class="form-label" for="c-phone">Phone</label>
+              <input class="form-input" id="c-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="sm:col-span-2">
+              <label class="form-label" for="c-message">Message *</label>
+              <textarea class="form-input" id="c-message" name="message" rows="5" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="Contact form - rangiorarsa.nz">
+            <!-- Honeypot spam trap -->
+            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="sm:col-span-2">
+              <button type="submit" class="btn-primary w-full sm:w-auto">Send Message</button>
+              <p class="form-note hidden mt-3 text-sm text-poppy"></p>
+            </div>
+          </form>
+        </div>
+        <div class="reveal-right">
+          <p class="eyebrow">Find Us</p>
+          <h2 class="font-display text-4xl font-bold mt-3">82 Victoria Street</h2>
+          <div class="mt-8 rounded-2xl overflow-hidden shadow-2xl shadow-navy/15 h-[420px]">
+            <iframe title="Map - Rangiora RSA Club, 82 Victoria Street, Rangiora" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Rangiora+RSA,+82+Victoria+Street,+Rangiora,+New+Zealand&output=embed"></iframe>
+          </div>
+          <p class="mt-5 text-navy/70 text-sm leading-relaxed">A short 30-minute drive north of central Christchurch, within walking distance of Rangiora's main shopping precinct and close to accommodation in the Waimakariri District.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy-dark text-white">
+    <div class="h-1 bg-gradient-to-r from-poppy via-poppy-light to-poppy"></div>
+    <div class="max-w-7xl mx-auto px-4 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl font-bold">Rangiora RSA <span class="text-poppy-light">Club</span></p>
+        <p class="mt-4 text-white/60 text-sm leading-relaxed">A friendly atmosphere for members, guests and visitors - for any occasion. Proudly serving our community since 1919.</p>
+        <p class="mt-4 text-white/60 text-sm italic">"Meet people, share stories, have a laugh and help out in your community."</p>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Explore</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li><a class="hover:text-poppy-light" href="about.html">About &amp; History</a></li>
+          <li><a class="hover:text-poppy-light" href="facilities.html">Facilities &amp; Venue Hire</a></li>
+          <li><a class="hover:text-poppy-light" href="restaurant.html">The Spitfire on Victoria</a></li>
+          <li><a class="hover:text-poppy-light" href="events.html">Events</a></li>
+          <li><a class="hover:text-poppy-light" href="news.html">News</a></li>
+          <li><a class="hover:text-poppy-light" href="membership.html">Join / Renew Membership</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Visit Us</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li>82 Victoria Street<br>Rangiora, Canterbury 7400</li>
+          <li><a class="hover:text-poppy-light" href="tel:+6433137123">03 313 7123</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rangiorarsa@gmail.com">rangiorarsa@gmail.com</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rgarsafunctions@gmail.com">rgarsafunctions@gmail.com</a> <span class="text-white/40">(functions)</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Hours</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li class="flex justify-between gap-4"><span>Mon &ndash; Sat</span><span>10.30am &ndash; 11.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Sunday</span><span>11.00am &ndash; 10.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Bar meals</span><span>Daily from 11.30am</span></li>
+          <li class="flex justify-between gap-4"><span>Restaurant</span><span>11.30am &ndash; 8.00pm</span></li>
+        </ul>
+        <a href="membership.html" class="btn-primary mt-6 text-sm">Join Now</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/45 text-xs">
+        <p>&copy; <span data-year>2026</span> Rangiora RSA Club (Inc). All rights reserved.</p>
+        <p class="flex items-center gap-2">Built by <img src="assets/img/openflow-wordmark.png" alt="OpenFlow" class="h-5 w-auto"><span class="text-white/45">&middot; Digital without limits</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-poppy text-white shadow-lg shadow-poppy/40 flex items-center justify-center hover:bg-poppy-dark" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
