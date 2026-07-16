@@ -1,0 +1,193 @@
+/* ==========================================================================
+   Rangiora RSA Club — Custom styles (used alongside Tailwind CDN)
+   Colours: Poppy #C41E3A · Navy #1B2A41 · Cream #FAF6F0
+   ========================================================================== */
+
+:root {
+  --poppy: #C41E3A;
+  --poppy-dark: #9A1830;
+  --navy: #1B2A41;
+  --navy-dark: #111C2E;
+  --cream: #FAF6F0;
+}
+
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+::selection { background: var(--poppy); color: #fff; }
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  background: var(--poppy); color: #fff; font-weight: 600;
+  padding: .8rem 1.75rem; border-radius: 9999px;
+  transition: all .3s ease; box-shadow: 0 4px 14px rgba(196, 30, 58, .35);
+}
+.btn-primary:hover { background: var(--poppy-dark); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(196, 30, 58, .45); }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  background: transparent; color: #fff; font-weight: 600;
+  padding: .8rem 1.75rem; border-radius: 9999px; border: 2px solid rgba(255,255,255,.7);
+  transition: all .3s ease;
+}
+.btn-secondary:hover { background: #fff; color: var(--navy); transform: translateY(-2px); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  color: var(--navy); font-weight: 600; padding: .8rem 1.5rem; border-radius: 9999px;
+  border: 2px solid rgba(27,42,65,.2); transition: all .3s ease;
+}
+.btn-ghost:hover { border-color: var(--poppy); color: var(--poppy); }
+
+.btn-navy {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  background: var(--navy); color: #fff; font-weight: 600;
+  padding: .8rem 1.75rem; border-radius: 9999px; transition: all .3s ease;
+}
+.btn-navy:hover { background: var(--navy-dark); transform: translateY(-2px); }
+
+/* --------------------------------------------------------------------------
+   Navigation
+   -------------------------------------------------------------------------- */
+.nav-link { position: relative; padding: .25rem 0; transition: color .25s ease; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0;
+  background: var(--poppy); transition: width .3s ease; border-radius: 2px;
+}
+.nav-link:hover, .nav-link.active { color: var(--poppy); }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+.dropdown {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+  min-width: 12rem; background: #fff; border-radius: .75rem; padding: .5rem;
+  box-shadow: 0 20px 40px rgba(17,28,46,.15); border: 1px solid rgba(0,0,0,.05);
+  opacity: 0; visibility: hidden; transition: all .25s ease; z-index: 60;
+}
+.group:hover .dropdown, .group:focus-within .dropdown { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+.dropdown a { display: block; padding: .55rem .9rem; border-radius: .5rem; font-weight: 500; color: var(--navy); }
+.dropdown a:hover { background: var(--cream); color: var(--poppy); }
+
+#site-header.scrolled { box-shadow: 0 6px 24px rgba(17,28,46,.08); }
+
+/* --------------------------------------------------------------------------
+   Scroll-reveal animations (activated by main.js IntersectionObserver)
+   -------------------------------------------------------------------------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+.reveal-left { opacity: 0; transform: translateX(-36px); transition: opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1); }
+.reveal-right { opacity: 0; transform: translateX(36px); transition: opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1); }
+.reveal-left.is-visible, .reveal-right.is-visible { opacity: 1; transform: none; }
+.reveal-zoom { opacity: 0; transform: scale(.94); transition: opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1); }
+.reveal-zoom.is-visible { opacity: 1; transform: scale(1); }
+/* Stagger helpers */
+.delay-1 { transition-delay: .12s; } .delay-2 { transition-delay: .24s; }
+.delay-3 { transition-delay: .36s; } .delay-4 { transition-delay: .48s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right, .reveal-zoom { opacity: 1; transform: none; transition: none; }
+  .kenburns { animation: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.kenburns { animation: kenburns 18s ease-in-out infinite alternate; }
+@keyframes kenburns {
+  from { transform: scale(1) translateY(0); }
+  to   { transform: scale(1.08) translateY(-1.5%); }
+}
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(17,28,46,.55) 0%, rgba(17,28,46,.35) 45%, rgba(17,28,46,.75) 100%);
+}
+.scroll-cue { animation: cue 2.2s ease-in-out infinite; }
+@keyframes cue { 0%,100% { transform: translateY(0); opacity:.9; } 50% { transform: translateY(10px); opacity:.5; } }
+
+/* --------------------------------------------------------------------------
+   Cards & imagery
+   -------------------------------------------------------------------------- */
+.card-hover { transition: transform .35s ease, box-shadow .35s ease; }
+.card-hover:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(17,28,46,.14); }
+.img-zoom { overflow: hidden; }
+.img-zoom img { transition: transform .6s cubic-bezier(.22,1,.36,1); }
+.img-zoom:hover img { transform: scale(1.06); }
+
+/* Poppy divider flourish */
+.poppy-divider { display: flex; align-items: center; justify-content: center; gap: .75rem; }
+.poppy-divider::before, .poppy-divider::after {
+  content: ""; height: 1px; width: 64px; background: linear-gradient(90deg, transparent, var(--poppy));
+}
+.poppy-divider::after { background: linear-gradient(90deg, var(--poppy), transparent); }
+
+.eyebrow { letter-spacing: .22em; text-transform: uppercase; font-size: .75rem; font-weight: 700; color: var(--poppy); }
+
+/* --------------------------------------------------------------------------
+   Timeline (About page)
+   -------------------------------------------------------------------------- */
+.timeline { position: relative; }
+.timeline::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 1.1rem; width: 2px;
+  background: linear-gradient(to bottom, var(--poppy), rgba(196,30,58,.15));
+}
+@media (min-width: 768px) { .timeline::before { left: 50%; transform: translateX(-50%); } }
+.timeline-dot {
+  position: absolute; left: .55rem; top: .4rem; width: 1.15rem; height: 1.15rem;
+  background: #fff; border: 4px solid var(--poppy); border-radius: 9999px; z-index: 1;
+}
+@media (min-width: 768px) { .timeline-dot { left: 50%; transform: translateX(-50%); } }
+
+/* --------------------------------------------------------------------------
+   Accordion (FAQ)
+   -------------------------------------------------------------------------- */
+.accordion-panel { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(.22,1,.36,1); }
+.accordion-item.open .accordion-panel { max-height: 24rem; }
+.accordion-item .acc-icon { transition: transform .35s ease; }
+.accordion-item.open .acc-icon { transform: rotate(45deg); }
+
+/* --------------------------------------------------------------------------
+   Lightbox (Gallery)
+   -------------------------------------------------------------------------- */
+#lightbox { backdrop-filter: blur(6px); }
+#lightbox.hidden { display: none; }
+#lightbox img { max-height: 82vh; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+
+/* --------------------------------------------------------------------------
+   Events filter
+   -------------------------------------------------------------------------- */
+.filter-btn { transition: all .25s ease; }
+.filter-btn.active { background: var(--poppy); color: #fff; border-color: var(--poppy); }
+.event-card.hidden-card { display: none; }
+
+/* --------------------------------------------------------------------------
+   Forms
+   -------------------------------------------------------------------------- */
+.form-input {
+  width: 100%; border: 1.5px solid rgba(27,42,65,.15); border-radius: .65rem;
+  padding: .75rem 1rem; background: #fff; color: var(--navy);
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+.form-input:focus { outline: none; border-color: var(--poppy); box-shadow: 0 0 0 3px rgba(196,30,58,.12); }
+.form-label { display: block; font-weight: 600; font-size: .875rem; color: var(--navy); margin-bottom: .4rem; }
+
+/* --------------------------------------------------------------------------
+   Misc
+   -------------------------------------------------------------------------- */
+#back-to-top { opacity: 0; pointer-events: none; transition: opacity .3s ease, transform .3s ease; transform: translateY(10px); }
+#back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+.stat-number { font-variant-numeric: tabular-nums; }
+
+/* Marquee for section chips (home page) */
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.floaty { animation: floaty 5s ease-in-out infinite; }
+
+/* Auto-sliding carousel */
+.slider-track { will-change: transform; }
+
+/* Custom scrollbar (subtle, webkit) */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: #c9c2b8; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--poppy); }
