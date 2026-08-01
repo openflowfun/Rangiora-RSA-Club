@@ -99,37 +99,43 @@
   <main id="content">
 
     <!-- ===================== HERO ===================== -->
-    <section class="relative h-[92vh] min-h-[620px] overflow-hidden" aria-label="Welcome">
-      <!-- Hero video (falls back to the photo on browsers/connections that can't play it) -->
-      <video class="absolute inset-0 w-full h-full object-cover object-left md:object-center" autoplay muted loop playsinline preload="metadata" poster="assets/img/landing.jpg" aria-label="Rangiora RSA Club entrance on Victoria Street">
-        <source src="assets/video/landing.mp4" type="video/mp4">
-        <img class="absolute inset-0 w-full h-full object-cover object-left md:object-center" src="assets/img/landing.jpg" alt="Rangiora RSA Club entrance on Victoria Street">
-      </video>
-      <div class="hero-overlay absolute inset-0"></div>
-      <div class="relative z-10 h-full max-w-7xl mx-auto px-4 flex flex-col justify-center items-start lg:items-end">
-        <div class="lg:w-[36rem] lg:max-w-full">
-        <p class="reveal is-visible eyebrow text-white/90 mb-4 flex items-center gap-3">
-          <span class="inline-block w-10 h-[2px] bg-poppy"></span> Est. 1919 &middot; Rangiora, Canterbury
-        </p>
-        <h1 class="font-display text-white font-bold text-3xl sm:text-5xl xl:text-6xl leading-[1.05] whitespace-nowrap">
-          The Club for <span class="text-poppy-light italic">Everyone</span>
-        </h1>
-        <p class="mt-6 text-white/85 text-lg sm:text-xl max-w-xl leading-relaxed">
-          Meet people, share stories, have a laugh and help out in your community.
-          A friendly atmosphere for members, guests and visitors - for any occasion.
-        </p>
-        <div class="mt-9 flex flex-wrap gap-4">
-          <a href="membership.html" class="btn-primary text-base">Join Now</a>
-          <a href="events.html" class="btn-secondary text-base">View Events</a>
-        </div>
-        <div class="mt-10 flex items-center gap-2 text-white/75 text-sm">
-          <svg class="w-4 h-4 text-poppy-light" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="m9.69 18.93.03.01.01.01a.75.75 0 0 0 .54 0l.01-.01.03-.01.1-.06a12.6 12.6 0 0 0 3.05-2.4C15.21 14.6 17 11.64 17 8A7 7 0 1 0 3 8c0 3.64 1.79 6.6 3.54 8.47a12.6 12.6 0 0 0 3.05 2.4l.1.06ZM10 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" clip-rule="evenodd"/></svg>82 Victoria Street, Rangiora
-        </div>
+    <section class="relative bg-navy overflow-hidden" aria-label="Welcome">
+      <!-- Full-frame hero video (3:2) - shown uncropped on all screens. HD upscaled source. -->
+      <div class="relative w-full aspect-[3/2]">
+        <video class="absolute inset-0 w-full h-full" autoplay muted loop playsinline preload="auto" poster="assets/img/landing.jpg" aria-label="Rangiora RSA Club entrance on Victoria Street">
+          <source src="assets/video/landing-hd.mp4" type="video/mp4">
+          <img class="absolute inset-0 w-full h-full object-contain" src="assets/img/landing.jpg" alt="Rangiora RSA Club entrance on Victoria Street">
+        </video>
+        <!-- Desktop/tablet: text overlaid on the right -->
+        <div class="hero-overlay absolute inset-0 hidden md:block"></div>
+        <div class="absolute inset-0 z-10 hidden md:flex flex-col justify-center items-end max-w-7xl mx-auto px-4 w-full">
+          <div class="lg:w-[36rem]">
+            <p class="eyebrow text-white/90 mb-4 flex items-center gap-3"><span class="inline-block w-10 h-[2px] bg-poppy"></span> Est. 1919 &middot; Rangiora, Canterbury</p>
+            <h1 class="font-display text-white font-bold text-4xl lg:text-5xl xl:text-6xl leading-[1.05] whitespace-nowrap">The Club for <span class="text-poppy-light italic">Everyone</span></h1>
+            <p class="mt-6 text-white/85 text-lg xl:text-xl max-w-xl leading-relaxed">Meet people, share stories, have a laugh and help out in your community. A friendly atmosphere for members, guests and visitors - for any occasion.</p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="membership.html" class="btn-primary text-base">Join Now</a>
+              <a href="events.html" class="btn-secondary text-base">View Events</a>
+            </div>
+            <div class="mt-8 flex items-center gap-2 text-white/75 text-sm">
+              <svg class="w-4 h-4 text-poppy-light" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="m9.69 18.93.03.01.01.01a.75.75 0 0 0 .54 0l.01-.01.03-.01.1-.06a12.6 12.6 0 0 0 3.05-2.4C15.21 14.6 17 11.64 17 8A7 7 0 1 0 3 8c0 3.64 1.79 6.6 3.54 8.47a12.6 12.6 0 0 0 3.05 2.4l.1.06ZM10 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" clip-rule="evenodd"/></svg>82 Victoria Street, Rangiora
+            </div>
+          </div>
         </div>
       </div>
-      <a href="#welcome" class="scroll-cue absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/80" aria-label="Scroll down">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m0 0-6-6m6 6 6-6"/></svg>
-      </a>
+      <!-- Mobile: text below the full-width video -->
+      <div class="md:hidden bg-navy text-white px-4 pt-8 pb-12">
+        <p class="eyebrow text-white/90 mb-3 flex items-center gap-3"><span class="inline-block w-10 h-[2px] bg-poppy"></span> Est. 1919 &middot; Rangiora, Canterbury</p>
+        <h1 class="font-display font-bold text-3xl leading-[1.1] whitespace-nowrap">The Club for <span class="text-poppy-light italic">Everyone</span></h1>
+        <p class="mt-4 text-white/85 leading-relaxed">Meet people, share stories, have a laugh and help out in your community. A friendly atmosphere for members, guests and visitors - for any occasion.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="membership.html" class="btn-primary text-sm">Join Now</a>
+          <a href="events.html" class="btn-secondary text-sm">View Events</a>
+        </div>
+        <div class="mt-7 flex items-center gap-2 text-white/75 text-sm">
+          <svg class="w-4 h-4 text-poppy-light" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="m9.69 18.93.03.01.01.01a.75.75 0 0 0 .54 0l.01-.01.03-.01.1-.06a12.6 12.6 0 0 0 3.05-2.4C15.21 14.6 17 11.64 17 8A7 7 0 1 0 3 8c0 3.64 1.79 6.6 3.54 8.47a12.6 12.6 0 0 0 3.05 2.4l.1.06ZM10 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" clip-rule="evenodd"/></svg>82 Victoria Street, Rangiora
+        </div>
+      </div>
     </section>
 
     <!-- ===================== STATS STRIP ===================== -->
