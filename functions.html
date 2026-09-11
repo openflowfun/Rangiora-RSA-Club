@@ -218,14 +218,19 @@
     </section>
 
     <!-- More views -->
-    <section class="py-12 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <p class="reveal eyebrow text-center">More Views</p>
-        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="reveal img-zoom rounded-xl overflow-hidden h-40"><img class="w-full h-full object-cover" src="assets/img/rooms/fraser-room-2.jpg" alt="The Fraser Room set up for a meeting" loading="lazy"></div>
-          <div class="reveal delay-1 img-zoom rounded-xl overflow-hidden h-40"><img class="w-full h-full object-cover" src="assets/img/rooms/kippenberger-room1-dining.jpg" alt="Kippenberger Room 1 set up for dining" loading="lazy"></div>
-          <div class="reveal delay-2 img-zoom rounded-xl overflow-hidden h-40"><img class="w-full h-full object-cover" src="assets/img/rooms/kippenberger-room2-rows.jpg" alt="Kippenberger Room 2 set up with long dining tables" loading="lazy"></div>
-          <div class="reveal delay-3 img-zoom rounded-xl overflow-hidden h-40"><img class="w-full h-full object-cover" src="assets/img/rooms/spitfire-function-2.jpg" alt="The Spitfire Restaurant dressed for a celebration" loading="lazy"></div>
+    <section class="py-12 bg-white overflow-hidden">
+      <p class="reveal eyebrow text-center">More Views</p>
+      <div class="mt-8 marquee-wrap">
+        <div class="marquee-track">
+          <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/rooms/fraser-room-2.jpg" alt="The Fraser Room set up for a meeting" loading="lazy"></div>
+          <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/rooms/kippenberger-room1-dining.jpg" alt="Kippenberger Room 1 set up for dining" loading="lazy"></div>
+          <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/rooms/kippenberger-room2-rows.jpg" alt="Kippenberger Room 2 set up with long dining tables" loading="lazy"></div>
+          <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/rooms/spitfire-function-2.jpg" alt="The Spitfire Restaurant dressed for a celebration" loading="lazy"></div>
+          <!-- Duplicate set for seamless infinite loop (hidden from assistive tech) -->
+          <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/rooms/fraser-room-2.jpg" alt="" loading="lazy"></div>
+          <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/rooms/kippenberger-room1-dining.jpg" alt="" loading="lazy"></div>
+          <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/rooms/kippenberger-room2-rows.jpg" alt="" loading="lazy"></div>
+          <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/rooms/spitfire-function-2.jpg" alt="" loading="lazy"></div>
         </div>
       </div>
     </section>
