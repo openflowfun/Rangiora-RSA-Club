@@ -193,6 +193,17 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 .floaty { animation: floaty 5s ease-in-out infinite; }
 
+/* --------------------------------------------------------------------------
+   Continuous leftward-scrolling image marquee (Functions "More Views")
+   -------------------------------------------------------------------------- */
+.marquee-wrap { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.marquee-track { display: flex; width: max-content; gap: 1.5rem; animation: marquee-left 26s linear infinite; }
+.marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+.marquee-item { flex: 0 0 auto; width: 21rem; height: 20rem; }
+@media (max-width: 640px) { .marquee-item { width: 16rem; height: 16rem; } }
+@keyframes marquee-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
 /* Auto-sliding carousel */
 .slider-track { will-change: transform; }
 
