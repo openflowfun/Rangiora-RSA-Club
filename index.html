@@ -49,50 +49,49 @@
           <span class="text-[10px] tracking-[0.25em] uppercase text-poppy font-bold">Est. 1919</span>
         </span>
       </a>
-      <ul class="hidden lg:flex items-center gap-6 font-medium">
+      <ul class="hidden xl:flex items-center gap-5 font-medium text-[15px]">
         <li><a class="nav-link active" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="about.html">About</a></li>
         <li><a class="nav-link" href="facilities.html">Our Club</a></li>
         <li><a class="nav-link" href="functions.html">Functions</a></li>
         <li><a class="nav-link" href="restaurant.html">Restaurant</a></li>
-        <li><a class="nav-link" href="events.html">Events</a></li>
-        <li><a class="nav-link" href="news.html">News</a></li>
+        <li><a class="nav-link" href="whats-on.html">News &amp; Events</a></li>
+        <li><a class="nav-link" href="membership.html">Membership</a></li>
+        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
         <li class="relative group">
           <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">More
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
           </button>
           <ul class="dropdown">
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="board.html">Board</a></li>
             <li><a href="faq.html">FAQs</a></li>
-            <li><a href="contact.html">Contact</a></li>
           </ul>
         </li>
       </ul>
-      <div class="hidden lg:flex items-center gap-3">
+      <div class="hidden xl:flex items-center gap-3">
         <a href="contact.html" class="btn-ghost text-sm">Visit Us</a>
         <a href="membership.html" class="btn-primary text-sm">Join Now</a>
       </div>
-      <button id="menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-cream" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+      <button id="menu-toggle" class="xl:hidden p-2 rounded-lg hover:bg-cream" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
         <svg class="icon-open w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
         <svg class="icon-close hidden w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M6 18 18 6"/></svg>
       </button>
     </nav>
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-black/5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+    <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-black/5 max-h-[calc(100vh-5rem)] overflow-y-auto">
       <div class="px-6 py-6 space-y-1 font-medium text-lg">
         <a class="block py-2 text-poppy" href="index.html">Home</a>
-        <a class="block py-2" href="about.html">About</a>
         <a class="block py-2" href="facilities.html">Our Club</a>
         <a class="block py-2" href="functions.html">Functions</a>
         <a class="block py-2" href="restaurant.html">Restaurant</a>
+        <a class="block py-2" href="whats-on.html">News &amp; Events</a>
         <a class="block py-2" href="membership.html">Membership</a>
-        <a class="block py-2" href="events.html">Events</a>
-        <a class="block py-2" href="news.html">News</a>
         <a class="block py-2" href="gallery.html">Gallery</a>
+        <a class="block py-2" href="contact.html">Contact</a>
+        <a class="block py-2" href="about.html">About</a>
         <a class="block py-2" href="board.html">Board</a>
         <a class="block py-2" href="faq.html">FAQs</a>
-        <a class="block py-2" href="contact.html">Contact</a>
         <a class="btn-primary w-full mt-4" href="membership.html">Join Now</a>
       </div>
     </div>
@@ -104,12 +103,22 @@
     <section class="relative bg-navy overflow-hidden" aria-label="Welcome">
       <!-- Full-frame hero video (3:2) - shown uncropped on all screens. HD upscaled source. -->
       <div class="relative w-full aspect-[3/2]">
-        <video class="absolute inset-0 w-full h-full" autoplay muted loop playsinline preload="auto" poster="assets/img/landing.jpg" aria-label="Rangiora RSA Club entrance on Victoria Street">
-          <source src="assets/video/landing-hd.mp4" type="video/mp4">
+        <video id="hero-video" class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="metadata" poster="assets/img/landing.jpg" aria-label="Rangiora RSA Club highlights video">
+          <source src="assets/video/hero-rsa-2021-web.mp4" type="video/mp4">
           <img class="absolute inset-0 w-full h-full object-contain" src="assets/img/landing.jpg" alt="Rangiora RSA Club entrance on Victoria Street">
         </video>
         <!-- Desktop/tablet: text overlaid on the right -->
         <div class="hero-overlay absolute inset-0 hidden md:block"></div>
+        <!-- Mute/unmute toggle - defaults to muted, never overlaps CTA buttons -->
+        <button id="hero-mute-toggle" type="button" aria-pressed="true" aria-label="Unmute background video"
+          class="absolute bottom-5 right-5 md:bottom-7 md:right-7 z-20 w-11 h-11 rounded-full bg-navy/60 backdrop-blur-sm border border-white/30 text-white flex items-center justify-center hover:bg-navy/80 transition-colors">
+          <svg id="hero-mute-icon-off" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5 6 9H3v6h3l5 4V5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m23 9-6 6M17 9l6 6"/></svg>
+          <svg id="hero-mute-icon-on" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5 6 9H3v6h3l5 4V5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 6a9 9 0 0 1 0 12"/></svg>
+        </button>
+        <!-- Scroll cue -->
+        <div class="scroll-cue-wrap hidden md:block pointer-events-none">
+          <svg class="scroll-cue w-7 h-7 text-white/70" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m0 0-5-5m5 5 5-5"/></svg>
+        </div>
         <div class="absolute inset-0 z-10 hidden md:flex flex-col justify-center items-end max-w-7xl mx-auto px-4 w-full">
           <div class="lg:w-[36rem]">
             <p class="eyebrow text-white/90 mb-4 flex items-center gap-3"><span class="inline-block w-10 h-[2px] bg-poppy"></span> Est. 1919 &middot; Rangiora, Canterbury</p>
@@ -117,7 +126,7 @@
             <p class="mt-6 text-white/85 text-lg xl:text-xl max-w-xl leading-relaxed">Meet people, share stories, have a laugh and help out in your community. A friendly atmosphere for members, guests and visitors - for any occasion.</p>
             <div class="mt-8 flex flex-wrap gap-4">
               <a href="membership.html" class="btn-primary text-base">Join Now</a>
-              <a href="events.html" class="btn-secondary text-base">View Events</a>
+              <a href="whats-on.html" class="btn-secondary text-base">View Events</a>
             </div>
             <div class="mt-8 flex items-center gap-2 text-white/75 text-sm">
               <svg class="w-4 h-4 text-poppy-light" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="m9.69 18.93.03.01.01.01a.75.75 0 0 0 .54 0l.01-.01.03-.01.1-.06a12.6 12.6 0 0 0 3.05-2.4C15.21 14.6 17 11.64 17 8A7 7 0 1 0 3 8c0 3.64 1.79 6.6 3.54 8.47a12.6 12.6 0 0 0 3.05 2.4l.1.06ZM10 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" clip-rule="evenodd"/></svg>82 Victoria Street, Rangiora
@@ -132,7 +141,7 @@
         <p class="mt-4 text-white/85 leading-relaxed">Meet people, share stories, have a laugh and help out in your community. A friendly atmosphere for members, guests and visitors - for any occasion.</p>
         <div class="mt-7 flex flex-wrap gap-3">
           <a href="membership.html" class="btn-primary text-sm">Join Now</a>
-          <a href="events.html" class="btn-secondary text-sm">View Events</a>
+          <a href="whats-on.html" class="btn-secondary text-sm">View Events</a>
         </div>
         <div class="mt-7 flex items-center gap-2 text-white/75 text-sm">
           <svg class="w-4 h-4 text-poppy-light" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="m9.69 18.93.03.01.01.01a.75.75 0 0 0 .54 0l.01-.01.03-.01.1-.06a12.6 12.6 0 0 0 3.05-2.4C15.21 14.6 17 11.64 17 8A7 7 0 1 0 3 8c0 3.64 1.79 6.6 3.54 8.47a12.6 12.6 0 0 0 3.05 2.4l.1.06ZM10 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" clip-rule="evenodd"/></svg>82 Victoria Street, Rangiora
@@ -235,7 +244,7 @@
     <!-- ===================== SPITFIRE RESTAURANT FEATURE ===================== -->
     <section class="relative py-28 overflow-hidden" aria-label="Spitfire Restaurant">
       <!-- PLACEHOLDER IMAGE: replace with a Spitfire Restaurant dish or dining room photo -->
-      <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=80" alt="Chef plating a beautifully presented meal" loading="lazy">
+      <img class="parallax-img absolute inset-0 w-full h-full object-cover" data-parallax src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=80" alt="Chef plating a beautifully presented meal" loading="lazy">
       <div class="absolute inset-0 bg-navy/80"></div>
       <div class="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
         <p class="reveal eyebrow text-poppy-light">The Spitfire on Victoria</p>
@@ -253,7 +262,7 @@
 
     <!-- ===================== FUNCTIONS PREVIEW ===================== -->
     <section class="relative py-28 overflow-hidden" aria-label="Functions and venue hire">
-      <img class="absolute inset-0 w-full h-full object-cover" src="assets/img/rooms/kippenberger-joint.jpg" alt="Kippenberger Function Rooms set up for a large event" loading="lazy">
+      <img class="parallax-img absolute inset-0 w-full h-full object-cover" data-parallax src="assets/img/rooms/kippenberger-joint.jpg" alt="Kippenberger Function Rooms set up for a large event" loading="lazy">
       <div class="absolute inset-0 bg-navy/80"></div>
       <div class="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
         <p class="reveal eyebrow text-poppy-light">Functions &amp; Venue Hire</p>
@@ -306,7 +315,7 @@
               <p class="mt-2 text-navy/70">Six spaces to hire - the Fraser Room, Kippenberger Rooms 1 &amp; 2, the Poppy Room and the Spitfire Restaurant.</p>
             </div>
           </a>
-          <a href="events.html" class="reveal delay-1 card-hover group bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5">
+          <a href="whats-on.html" class="reveal delay-1 card-hover group bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5">
             <div class="img-zoom h-56"><img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=900&q=80" alt="Live entertainment with colourful lights" loading="lazy"></div>
             <div class="p-7">
               <h3 class="font-display text-2xl font-bold group-hover:text-poppy transition-colors">Events &amp; Entertainment</h3>
@@ -324,24 +333,25 @@
       </div>
     </section>
 
-    <!-- ===================== SECTIONS CHIPS ===================== -->
+    <!-- ===================== SECTIONS ===================== -->
     <section class="pb-24">
       <div class="max-w-5xl mx-auto px-4 text-center">
         <p class="reveal eyebrow poppy-divider">Get Involved</p>
-        <h2 class="reveal font-display text-3xl sm:text-4xl font-bold mt-4">Ten sections. One community.</h2>
-        <div class="reveal mt-10 flex flex-wrap justify-center gap-3">
-          <span class="px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Darts</span>
-          <span class="px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Indoor Bowls</span>
-          <span class="px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Snooker</span>
-          <span class="px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Fishing</span>
-          <span class="px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Golf</span>
-          <span class="px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Pool</span>
-          <span class="px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Welfare</span>
-          <span class="px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Women's Section</span>
-          <span class="px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Lifestyle</span>
-          <span class="px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Veterans</span>
+        <h2 class="reveal font-display text-4xl sm:text-5xl font-bold mt-4">Sections</h2>
+        <p class="reveal delay-1 mt-4 text-navy/70 max-w-2xl mx-auto">Ten sections, one community - there's a club night for everyone. Pick one (or a few) and get amongst it.</p>
+        <div class="reveal delay-1 mt-10 flex flex-wrap justify-center gap-3">
+          <span class="floaty px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors">Darts</span>
+          <span class="floaty px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors" style="animation-delay:.3s">Indoor Bowls</span>
+          <span class="floaty px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors" style="animation-delay:.6s">Snooker</span>
+          <span class="floaty px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors" style="animation-delay:.9s">Fishing</span>
+          <span class="floaty px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors" style="animation-delay:1.2s">Golf</span>
+          <span class="floaty px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors" style="animation-delay:1.5s">Pool</span>
+          <span class="floaty px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors" style="animation-delay:1.8s">Welfare</span>
+          <span class="floaty px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors" style="animation-delay:2.1s">Women's Section</span>
+          <span class="floaty px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors" style="animation-delay:2.4s">Lifestyle</span>
+          <span class="floaty px-5 py-2.5 bg-white rounded-full shadow-sm font-medium border border-navy/5 hover:border-poppy hover:text-poppy transition-colors" style="animation-delay:2.7s">Veterans</span>
         </div>
-        <a href="membership.html" class="reveal btn-primary mt-10">Join a Section When You Sign Up</a>
+        <a href="membership.html" class="reveal btn-primary mt-10">Join a Section</a>
       </div>
     </section>
 
@@ -424,8 +434,7 @@
           <li><a class="hover:text-poppy-light" href="facilities.html">Our Club</a></li>
           <li><a class="hover:text-poppy-light" href="functions.html">Functions &amp; Venue Hire</a></li>
           <li><a class="hover:text-poppy-light" href="restaurant.html">The Spitfire on Victoria</a></li>
-          <li><a class="hover:text-poppy-light" href="events.html">Events</a></li>
-          <li><a class="hover:text-poppy-light" href="news.html">News</a></li>
+          <li><a class="hover:text-poppy-light" href="whats-on.html">News &amp; Events</a></li>
           <li><a class="hover:text-poppy-light" href="membership.html">Join / Renew Membership</a></li>
         </ul>
       </div>
