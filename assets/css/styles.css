@@ -143,6 +143,7 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
    -------------------------------------------------------------------------- */
 .accordion-panel { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(.22,1,.36,1); }
 .accordion-item.open .accordion-panel { max-height: 24rem; }
+.menu-accordion .accordion-item.open .accordion-panel { max-height: 60rem; }
 .accordion-item .acc-icon { transition: transform .35s ease; }
 .accordion-item.open .acc-icon { transform: rotate(45deg); }
 
