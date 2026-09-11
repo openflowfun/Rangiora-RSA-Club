@@ -223,4 +223,44 @@
 
   /* ---------------- Footer year ---------------- */
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
+
+  /* ---------------- Scroll-linked parallax (background images) ---------------- */
+  const parallaxEls = Array.from(document.querySelectorAll("[data-parallax]"));
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (parallaxEls.length && !reduceMotion) {
+    let ticking = false;
+    const updateParallax = () => {
+      const vh = window.innerHeight;
+      parallaxEls.forEach((el) => {
+        const rect = el.parentElement.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > vh) return; // offscreen - skip
+        const progress = (rect.top + rect.height / 2 - vh / 2) / vh; // -0.5..0.5 roughly
+        const shift = progress * 60; // px of travel
+        el.style.transform = `translate3d(0, ${shift}px, 0) scale(1.15)`;
+      });
+      ticking = false;
+    };
+    window.addEventListener("scroll", () => {
+      if (!ticking) { requestAnimationFrame(updateParallax); ticking = true; }
+    }, { passive: true });
+    updateParallax();
+  }
+
+  /* ---------------- Hero video mute/unmute toggle (defaults muted) ---------------- */
+  const heroVideo = document.getElementById("hero-video");
+  const heroMuteBtn = document.getElementById("hero-mute-toggle");
+  if (heroVideo && heroMuteBtn) {
+    const iconOff = document.getElementById("hero-mute-icon-off");
+    const iconOn = document.getElementById("hero-mute-icon-on");
+    heroVideo.muted = true; // enforce muted default regardless of autoplay policy
+    heroMuteBtn.addEventListener("click", () => {
+      heroVideo.muted = !heroVideo.muted;
+      const isMuted = heroVideo.muted;
+      heroMuteBtn.setAttribute("aria-pressed", String(isMuted));
+      heroMuteBtn.setAttribute("aria-label", isMuted ? "Unmute background video" : "Mute background video");
+      iconOff.classList.toggle("hidden", !isMuted);
+      iconOn.classList.toggle("hidden", isMuted);
+      if (!isMuted) heroVideo.play().catch(() => {});
+    });
+  }
 })();
