@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Sections | Rangiora RSA Club</title>
+  <meta name="description" content="Ten sections, one community - Darts, Indoor Bowls, Snooker, Fishing, Golf, Pool, Welfare, Women's Section, Lifestyle and Veterans. Find your club night at the Rangiora RSA Club.">
+  <meta property="og:title" content="Club Sections | Rangiora RSA Club">
+  <meta property="og:description" content="Ten sections, one community - find your club night at the Rangiora RSA Club.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          poppy: { DEFAULT: '#C41E3A', dark: '#9A1830', light: '#E8556E' },
+          navy:  { DEFAULT: '#1B2A41', dark: '#111C2E', light: '#2C3E5C' },
+          cream: { DEFAULT: '#FAF6F0', dark: '#F0E9DE' }
+        },
+        fontFamily: { display: ['"Playfair Display"','serif'], body: ['Inter','system-ui','sans-serif'] }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="font-body text-navy bg-cream">
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="bg-navy text-white/90 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-9">
+      <p class="hidden sm:block">Open 7 days &middot; Mon&ndash;Sat 10.30am&ndash;11pm &middot; Sun 11am&ndash;10pm</p>
+      <div class="flex items-center gap-5 ml-auto">
+        <a href="tel:+6433137123" class="hover:text-white font-medium">03 313 7123</a>
+        <a href="mailto:rangiorarsa@gmail.com" class="hidden md:inline hover:text-white">rangiorarsa@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+    <nav class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Rangiora RSA Club home">
+        <img src="assets/img/RSA-club-logo.webp" alt="Rangiora RSA Club logo" class="h-14 w-auto rounded-sm">
+        <span class="leading-tight">
+          <span class="font-display font-bold text-xl block whitespace-nowrap">Rangiora RSA Club</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-poppy font-bold">Est. 1919</span>
+        </span>
+      </a>
+      <ul class="hidden xl:flex items-center gap-5 font-medium text-[15px]">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="facilities.html">Our Club</a></li>
+        <li><a class="nav-link" href="functions.html">Functions</a></li>
+        <li><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+        <li><a class="nav-link" href="whats-on.html">News &amp; Events</a></li>
+        <li><a class="nav-link" href="membership.html">Membership</a></li>
+        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="relative group">
+          <button class="nav-link active inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">Sections
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="sections.html#darts">Darts</a></li>
+            <li><a href="sections.html#indoor-bowls">Indoor Bowls</a></li>
+            <li><a href="sections.html#snooker">Snooker</a></li>
+            <li><a href="sections.html#fishing">Fishing</a></li>
+            <li><a href="sections.html#golf">Golf Section</a></li>
+            <li><a href="sections.html#pool">Pool</a></li>
+            <li><a href="sections.html#welfare">Welfare</a></li>
+            <li><a href="sections.html#womens">Women's Section</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">More
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="about.html">About</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hidden xl:flex items-center gap-3">
+        <a href="contact.html" class="btn-ghost text-sm">Visit Us</a>
+        <a href="membership.html" class="btn-primary text-sm">Join Now</a>
+      </div>
+      <button id="menu-toggle" class="xl:hidden p-2 rounded-lg hover:bg-cream" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg class="icon-open w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close hidden w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M6 18 18 6"/></svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-black/5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <div class="px-6 py-6 space-y-1 font-medium text-lg">
+        <a class="block py-2" href="index.html">Home</a>
+        <a class="block py-2" href="facilities.html">Our Club</a>
+        <a class="block py-2" href="functions.html">Functions</a>
+        <a class="block py-2" href="restaurant.html">Restaurant</a>
+        <a class="block py-2" href="whats-on.html">News &amp; Events</a>
+        <a class="block py-2" href="membership.html">Membership</a>
+        <a class="block py-2" href="gallery.html">Gallery</a>
+        <a class="block py-2" href="contact.html">Contact</a>
+        <a class="block py-2" href="about.html">About</a>
+        <a class="block py-2" href="board.html">Board</a>
+        <a class="block py-2" href="faq.html">FAQs</a>
+        <a class="block py-2 text-poppy" href="sections.html">Sections</a>
+        <a class="btn-primary w-full mt-4" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+<main id="content">
+
+    <!-- Page hero -->
+    <section class="relative py-32 overflow-hidden">
+      <img class="absolute inset-0 w-full h-full object-cover" src="assets/img/club-lounge.jpg" alt="Darts, pool and gaming at the Rangiora RSA Club" loading="lazy">
+      <div class="absolute inset-0 bg-navy/80"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 text-white">
+        <p class="eyebrow text-poppy-light">Get Involved</p>
+        <h1 class="font-display text-5xl sm:text-6xl font-bold mt-3">Club Sections</h1>
+        <p class="mt-5 max-w-2xl text-white/80 text-lg">Ten sections, one community - there's a club night for everyone. Pick one (or a few) and get amongst it.</p>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-20">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <p class="reveal eyebrow poppy-divider">Find Your Club Night</p>
+        <h2 class="reveal font-display text-4xl font-bold mt-4">Something for everyone</h2>
+        <p class="reveal mt-6 text-navy/75 text-lg leading-relaxed">All sections are open to Rangiora RSA Club members. Some charge a small annual subscription or match-night fee to cover competition and equipment costs - details are noted below. Get in touch with a section contact, or ask at the bar, to come along.</p>
+      </div>
+    </section>
+
+    <!-- Section cards -->
+    <section class="pb-24">
+      <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+
+        <!-- Darts -->
+        <article id="darts" class="reveal card-hover bg-white rounded-2xl shadow-lg shadow-navy/5 p-8 scroll-mt-28">
+          <div class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-lg font-bold">D</span>
+            <div>
+              <h3 class="font-display text-2xl font-bold">Darts</h3>
+              <p class="mt-3 text-navy/75 leading-relaxed">Pop along on a Tuesday night throughout summer and winter, or a weekend if you fancy a social game - we're never far from the dart boards. The Darts Section enters teams in the Summer &amp; Winter Darts Competitions in the North Canterbury area. Equipment advice is available for anyone keen to get started.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Indoor Bowls -->
+        <article id="indoor-bowls" class="reveal delay-1 card-hover bg-white rounded-2xl shadow-lg shadow-navy/5 p-8 scroll-mt-28">
+          <div class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-lg font-bold">IB</span>
+            <div>
+              <h3 class="font-display text-2xl font-bold">Indoor Bowls</h3>
+              <p class="mt-3 text-navy/75 leading-relaxed">Played at the club since 1957. The season runs March to October, with play on Monday evenings from 7pm - no fee to join the section, just a $2/person mat fee each time you play. The section competes in North Canterbury, Champion of Champions and inter-club competitions, and is always keen for new members.</p>
+              <p class="mt-4 text-sm text-navy/60">President: Valda Hopkins &middot; 03 327 9976<br>Secretary: Trish Milne &middot; 03 313 0158<br>Treasurer: Merv Willis &middot; 03 327 9976<br>Club Captain: Wayne Milne &middot; 03 313 0158</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Snooker -->
+        <article id="snooker" class="reveal delay-2 card-hover bg-white rounded-2xl shadow-lg shadow-navy/5 p-8 scroll-mt-28">
+          <div class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-lg font-bold">S</span>
+            <div>
+              <h3 class="font-display text-2xl font-bold">Snooker</h3>
+              <p class="mt-3 text-navy/75 leading-relaxed">Snooker and pool tables are available in the Sports Bar for members and guests any time the club is open. For section details, get in touch with the contact below.</p>
+              <p class="mt-4 text-sm text-navy/60">Section contact: Jordan Beswarick &middot; <a class="text-poppy font-semibold hover:underline" href="mailto:jordbez@gmail.com">jordbez@gmail.com</a></p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fishing -->
+        <article id="fishing" class="reveal card-hover bg-white rounded-2xl shadow-lg shadow-navy/5 p-8 scroll-mt-28">
+          <div class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-lg font-bold">F</span>
+            <div>
+              <h3 class="font-display text-2xl font-bold">Fishing</h3>
+              <p class="mt-3 text-navy/75 leading-relaxed">Formed in November 2005 and open to all club members - men and women - for $20 a year. Members fish everything from fly fishing to surfcasting, with competitive and social trips throughout the year at spots from Kaikoura to Gore and Lake Brunner to Otematata. The section meets every Friday night at the club to share stories and sell raffles.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Golf -->
+        <article id="golf" class="reveal delay-1 card-hover bg-white rounded-2xl shadow-lg shadow-navy/5 p-8 scroll-mt-28">
+          <div class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-lg font-bold">G</span>
+            <div>
+              <h3 class="font-display text-2xl font-bold">Golf Section</h3>
+              <p class="mt-3 text-navy/75 leading-relaxed">Over 50 members of all abilities, open to all club members for $20 a year (financial year 1 June &ndash; 31 May). Monthly outings are held on the 2nd Sunday for the Colleen Cherry Memorial Trophy, plus "Best of Year" awards presented at the June AGM, a subsidised away trip, and an RSA Welfare fundraising tournament each March. The club has hosted the NZ RSA Golf Tournament in 2011, 2015, 2017 and 2022.</p>
+              <p class="mt-4 text-sm text-navy/60">President: Nigel Seaton &middot; Secretary: Mike O'Connor &middot; Treasurer: Gary Clark</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pool -->
+        <article id="pool" class="reveal delay-2 card-hover bg-white rounded-2xl shadow-lg shadow-navy/5 p-8 scroll-mt-28">
+          <div class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-lg font-bold">P</span>
+            <div>
+              <h3 class="font-display text-2xl font-bold">Pool</h3>
+              <p class="mt-3 text-navy/75 leading-relaxed">The season runs April to August, with two teams entered in the Rangiora Kaiapoi Pool Association Competition on Wednesday evenings, and a Ladies team competing on Monday evenings against other North Canterbury clubs and hotels. The Sports Bar has two pool tables, a snooker table and a &frac34;-size snooker table available for members and guests any time.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Welfare -->
+        <article id="welfare" class="reveal card-hover bg-white rounded-2xl shadow-lg shadow-navy/5 p-8 scroll-mt-28">
+          <div class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-lg font-bold">W</span>
+            <div>
+              <h3 class="font-display text-2xl font-bold">Welfare</h3>
+              <p class="mt-3 text-navy/75 leading-relaxed">The Welfare Section is actively involved in assisting members in a wide variety of areas, organised through the RSA Association which runs alongside the club.</p>
+              <p class="mt-4 text-sm text-navy/60">Sec/Treasurer: Bill Peck &middot; 03 359 3807</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Women's Section -->
+        <article id="womens" class="reveal delay-1 card-hover bg-white rounded-2xl shadow-lg shadow-navy/5 p-8 scroll-mt-28">
+          <div class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-lg font-bold">WS</span>
+            <div>
+              <h3 class="font-display text-2xl font-bold">Women's Section</h3>
+              <p class="mt-3 text-navy/75 leading-relaxed">Formed in 1934 to support the benevolent work of the RSA - a role it continues today through fundraising and voluntary work for members and their families. Open to all lady members of the club; come along and meet others while sharing in the club's facilities and outings in the community.</p>
+              <p class="mt-4 text-sm text-navy/60">President: Pat Youngman &middot; 027 247 9611</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lifestyle -->
+        <article id="lifestyle" class="reveal delay-2 card-hover bg-white rounded-2xl shadow-lg shadow-navy/5 p-8 scroll-mt-28">
+          <div class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-lg font-bold">L</span>
+            <div>
+              <h3 class="font-display text-2xl font-bold">Lifestyle</h3>
+              <p class="mt-3 text-navy/75 leading-relaxed">The Lifestyle Section - get in touch with the section contact below for the latest on meetups and activities.</p>
+              <p class="mt-4 text-sm text-navy/60">Section contact: Charlotte &middot; <a class="text-poppy font-semibold hover:underline" href="mailto:rgarsafunctions@gmail.com">rgarsafunctions@gmail.com</a></p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Veterans -->
+        <article id="veterans" class="reveal card-hover bg-white rounded-2xl shadow-lg shadow-navy/5 p-8 scroll-mt-28 md:col-span-2">
+          <div class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-poppy/10 text-poppy flex items-center justify-center font-display text-lg font-bold">V</span>
+            <div>
+              <h3 class="font-display text-2xl font-bold">Veterans Section</h3>
+              <p class="mt-3 text-navy/75 leading-relaxed">Open to any veteran or supporter, operating under the same arrangements as the club's other sections. The section's major event each year falls around Vietnam Veterans Day (18 August).</p>
+              <p class="mt-4 text-sm text-navy/60">Contact: Chris Gunn &middot; <a class="text-poppy font-semibold hover:underline" href="mailto:clangunn@snap.net.nz">clangunn@snap.net.nz</a> &middot; 027 845 4937<br>Committee: Pat Duggan QSM, Ian "Blue" Caldwell, Bill Hansen, Chris Gunn</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 text-center bg-white border-t border-navy/5">
+      <div class="max-w-2xl mx-auto px-4">
+        <h2 class="reveal font-display text-3xl sm:text-4xl font-bold">Ready to join a section?</h2>
+        <p class="reveal mt-3 text-navy/70">Become a member for $30 a year, then pick a section (or a few) when you apply - or ask at the bar any time.</p>
+        <a href="membership.html" class="reveal btn-primary mt-7">Join the Club</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy-dark text-white">
+    <div class="h-1 bg-gradient-to-r from-poppy via-poppy-light to-poppy"></div>
+    <div class="max-w-7xl mx-auto px-4 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl font-bold">Rangiora RSA <span class="text-poppy-light">Club</span></p>
+        <p class="mt-4 text-white/60 text-sm leading-relaxed">A friendly atmosphere for members, guests and visitors - for any occasion. Proudly serving our community since 1919.</p>
+        <p class="mt-4 text-white/60 text-sm italic">"Meet people, share stories, have a laugh and help out in your community."</p>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Explore</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li><a class="hover:text-poppy-light" href="about.html">About &amp; History</a></li>
+          <li><a class="hover:text-poppy-light" href="facilities.html">Our Club</a></li>
+          <li><a class="hover:text-poppy-light" href="functions.html">Functions &amp; Venue Hire</a></li>
+          <li><a class="hover:text-poppy-light" href="restaurant.html">The Spitfire on Victoria</a></li>
+          <li><a class="hover:text-poppy-light" href="whats-on.html">News &amp; Events</a></li>
+          <li><a class="hover:text-poppy-light" href="membership.html">Join / Renew Membership</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Visit Us</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li>82 Victoria Street<br>Rangiora, Canterbury 7400</li>
+          <li><a class="hover:text-poppy-light" href="tel:+6433137123">03 313 7123</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rangiorarsa@gmail.com">rangiorarsa@gmail.com</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rgarsafunctions@gmail.com">rgarsafunctions@gmail.com</a> <span class="text-white/40">(functions)</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Hours</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li class="flex justify-between gap-4"><span>Mon &ndash; Sat</span><span>10.30am &ndash; 11.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Sunday</span><span>11.00am &ndash; 10.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Bar meals</span><span>Daily from 11.30am</span></li>
+          <li class="flex justify-between gap-4"><span>Restaurant</span><span>11.30am &ndash; 8.00pm</span></li>
+        </ul>
+        <a href="membership.html" class="btn-primary mt-6 text-sm">Join Now</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/45 text-xs">
+        <p>&copy; <span data-year>2026</span> Rangiora RSA Club (Inc). All rights reserved.</p>
+        <p class="flex items-center gap-2">Built by <a href="https://openflow.fun" target="_blank" rel="noopener" aria-label="OpenFlow website"><img src="assets/img/openflow-wordmark.png" alt="OpenFlow" class="h-5 w-auto hover:opacity-80 transition-opacity"></a><span class="text-white/45">&middot; Digital without limits</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-poppy text-white shadow-lg shadow-poppy/40 flex items-center justify-center hover:bg-poppy-dark" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
