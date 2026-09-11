@@ -108,11 +108,20 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 /* --------------------------------------------------------------------------
    Cards & imagery
    -------------------------------------------------------------------------- */
-.card-hover { transition: transform .35s ease, box-shadow .35s ease; }
-.card-hover:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(17,28,46,.14); }
+.card-hover { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease; transform-style: preserve-3d; perspective: 900px; }
+.card-hover:hover { transform: translateY(-6px) rotateX(2deg) rotateY(-2deg); box-shadow: 0 24px 48px rgba(17,28,46,.14); }
 .img-zoom { overflow: hidden; }
 .img-zoom img { transition: transform .6s cubic-bezier(.22,1,.36,1); }
 .img-zoom:hover img { transform: scale(1.06); }
+
+/* --------------------------------------------------------------------------
+   Parallax (scroll-linked, JS-driven via main.js; respects reduced-motion)
+   -------------------------------------------------------------------------- */
+.parallax-img { will-change: transform; transform: translate3d(0,0,0) scale(1.15); }
+@media (prefers-reduced-motion: reduce) { .parallax-img { transform: none !important; } }
+
+/* Scroll cue */
+.scroll-cue-wrap { position: absolute; left: 50%; bottom: 1.75rem; transform: translateX(-50%); z-index: 20; }
 
 /* Poppy divider flourish */
 .poppy-divider { display: flex; align-items: center; justify-content: center; gap: .75rem; }
