@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Spitfire on Victoria - Restaurant | Rangiora RSA Club</title>
+  <meta name="description" content="The Spitfire Restaurant at the Rangiora RSA Club - great food, great service, great value. Open to all guests 7 days a week, 11.30am–8pm. Dine in or takeaway. Bar meals daily from 11.30am.">
+  <meta property="og:title" content="The Spitfire on Victoria - Restaurant | Rangiora RSA Club">
+  <meta property="og:description" content="The Spitfire Restaurant at the Rangiora RSA Club - great food, great service, great value. Open to all guests 7 days a week, 11.30am–8pm. Dine in or takeaway. Bar meals daily from 11.30am.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          poppy: { DEFAULT: '#C41E3A', dark: '#9A1830', light: '#E8556E' },
+          navy:  { DEFAULT: '#1B2A41', dark: '#111C2E', light: '#2C3E5C' },
+          cream: { DEFAULT: '#FAF6F0', dark: '#F0E9DE' }
+        },
+        fontFamily: { display: ['"Playfair Display"','serif'], body: ['Inter','system-ui','sans-serif'] }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body class="font-body text-navy bg-cream">
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="bg-navy text-white/90 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-9">
+      <p class="hidden sm:block">Open 7 days &middot; Mon&ndash;Sat 10.30am&ndash;11pm &middot; Sun 11am&ndash;10pm</p>
+      <div class="flex items-center gap-5 ml-auto">
+        <a href="tel:+6433137123" class="hover:text-white font-medium">03 313 7123</a>
+        <a href="mailto:rangiorarsa@gmail.com" class="hidden md:inline hover:text-white">rangiorarsa@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+    <nav class="w-full px-6 flex items-center justify-between flex-nowrap h-20" aria-label="Main navigation">
+      <a href="../index.html" class="flex items-center gap-3 shrink-0" aria-label="Rangiora RSA Club home">
+        <img src="../assets/img/RSA-club-logo.webp" alt="Rangiora RSA Club logo" class="h-14 w-auto rounded-sm">
+        <span class="leading-tight">
+          <span class="font-display font-bold text-xl block whitespace-nowrap">Rangiora RSA Club</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-poppy font-bold">Est. 1919</span>
+        </span>
+      </a>
+      <ul class="hidden 2xl:flex items-center gap-4 font-medium text-[14px] whitespace-nowrap">
+        <li><a class="nav-link" href="../index.html">Home</a></li>
+        <li><a class="nav-link" href="../facilities.html">Our Club</a></li>
+        <li><a class="nav-link" href="../functions.html">Functions</a></li>
+        <li><a class="nav-link active" href="./">Restaurant</a></li>
+        <li><a class="nav-link" href="../whats-on.html">News &amp; Events</a></li>
+        <li><a class="nav-link" href="../membership.html">Membership</a></li>
+        <li><a class="nav-link" href="../contact.html">Contact</a></li>
+        <li class="relative group">
+          <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">Sections
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="../sections.html#darts">Darts</a></li>
+            <li><a href="../sections.html#indoor-bowls">Indoor Bowls</a></li>
+            <li><a href="../sections.html#snooker">Snooker</a></li>
+            <li><a href="../sections.html#fishing">Fishing</a></li>
+            <li><a href="../sections.html#golf">Golf Section</a></li>
+            <li><a href="../sections.html#pool">Pool</a></li>
+            <li><a href="../sections.html#welfare">Welfare</a></li>
+            <li><a href="../sections.html#womens">Women's Section</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">More
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+          </button>
+          <ul class="dropdown">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../board.html">Board</a></li>
+            <li><a href="../faq.html">FAQs</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hidden 2xl:flex items-center gap-3 shrink-0">
+        <a href="../contact.html" class="btn-ghost text-sm">Visit Us</a>
+        <a href="../membership.html" class="btn-primary text-sm">Join Now</a>
+      </div>
+      <button id="menu-toggle" class="2xl:hidden p-2 rounded-lg hover:bg-cream" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg class="icon-open w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close hidden w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M6 18 18 6"/></svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden 2xl:hidden bg-white border-t border-black/5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <div class="px-6 py-6 space-y-1 font-medium text-lg">
+        <a class="block py-2" href="../index.html">Home</a>
+        <a class="block py-2" href="../facilities.html">Our Club</a>
+        <a class="block py-2" href="../functions.html">Functions</a>
+        <a class="block py-2 text-poppy" href="./">Restaurant</a>
+        <a class="block py-2" href="../whats-on.html">News &amp; Events</a>
+        <a class="block py-2" href="../membership.html">Membership</a>
+        <a class="block py-2" href="../contact.html">Contact</a>
+        <a class="block py-2" href="../about.html">About</a>
+        <a class="block py-2" href="../board.html">Board</a>
+        <a class="block py-2" href="../faq.html">FAQs</a>
+        <a class="block py-2" href="../gallery.html">Gallery</a>
+        <a class="block py-2" href="../sections.html">Sections</a>
+        <a class="btn-primary w-full mt-4" href="../membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+<main id="content">
+
+    <!-- Page hero -->
+    <section class="relative py-36 overflow-hidden">
+      <img class="kenburns absolute inset-0 w-full h-full object-cover" src="../assets/img/restaurant-dining.jpg" alt="The Spitfire Restaurant dining room" loading="lazy">
+      <div class="hero-overlay absolute inset-0"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 text-white text-center">
+        <p class="eyebrow text-poppy-light">Dine In or Takeaway</p>
+        <h1 class="font-display text-5xl sm:text-7xl font-bold mt-3">The Spitfire <span class="italic text-poppy-light">on Victoria</span></h1>
+        <p class="mt-5 max-w-2xl mx-auto text-white/85 text-xl">Great food. Great service. Great value.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="#menu" class="btn-primary">View Our Menu</a>
+          <a href="tel:+6433137123" class="btn-secondary">Book a Table: 03 313 7123</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info strip -->
+    <section class="bg-navy text-white">
+      <div class="max-w-7xl mx-auto px-4 py-10 grid sm:grid-cols-3 gap-8 text-center">
+        <div class="reveal"><p class="eyebrow text-poppy-light">Open</p><p class="mt-2 font-semibold">7 days a week &middot; all guests welcome</p></div>
+        <div class="reveal delay-1"><p class="eyebrow text-poppy-light">Restaurant</p><p class="mt-2 font-semibold">Daily 11.30am &ndash; 8.00pm</p></div>
+        <div class="reveal delay-2"><p class="eyebrow text-poppy-light">Bar Meals</p><p class="mt-2 font-semibold">Daily from 11.30am</p></div>
+      </div>
+    </section>
+
+    <!-- About the restaurant -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal-left">
+          <p class="eyebrow">Our Restaurant</p>
+          <h2 class="font-display text-4xl font-bold mt-3">Run by the club, loved by the community</h2>
+          <p class="mt-5 text-navy/75 leading-relaxed">The Spitfire Restaurant is run in-house by the Rangiora RSA Club. It's open every day and attracts diners and groups celebrating their special occasions - you don't need to be a member to enjoy it.</p>
+          <p class="mt-4 text-navy/75 leading-relaxed">Whether it's a quick lunch, a family dinner, or a table for a milestone birthday, the Spitfire team will look after you. Takeaway available too.</p>
+          <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+            <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-display text-2xl font-bold text-poppy">7</p><p class="text-xs text-navy/60 mt-1 uppercase tracking-wider">Days a week</p></div>
+            <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-display text-2xl font-bold text-poppy">All</p><p class="text-xs text-navy/60 mt-1 uppercase tracking-wider">Guests welcome</p></div>
+            <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-display text-2xl font-bold text-poppy">200</p><p class="text-xs text-navy/60 mt-1 uppercase tracking-wider">Seat functions</p></div>
+          </div>
+        </div>
+        <div class="reveal-right grid grid-cols-2 gap-4">
+          <div class="img-zoom rounded-2xl shadow-lg"><img class="w-full h-64 object-cover rounded-2xl" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80" alt="Grilled steak dinner with sides" loading="lazy"></div>
+          <div class="img-zoom rounded-2xl shadow-lg mt-8"><img class="w-full h-64 object-cover rounded-2xl" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Freshly made pizza" loading="lazy"></div>
+          <div class="img-zoom rounded-2xl shadow-lg"><img class="w-full h-64 object-cover rounded-2xl" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80" alt="Pan-seared salmon with vegetables" loading="lazy"></div>
+          <div class="img-zoom rounded-2xl shadow-lg mt-8"><img class="w-full h-64 object-cover rounded-2xl" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80" alt="Dessert with ice cream" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekday Special -->
+    <section class="py-16 bg-cream-dark/50">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="reveal card-hover bg-navy rounded-3xl overflow-hidden shadow-xl shadow-navy/20 grid sm:grid-cols-[1fr_auto] items-center">
+          <div class="p-8 sm:p-10 text-white">
+            <p class="eyebrow text-poppy-light">Weekday Special</p>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold mt-2">Coffee &amp; Scone <span class="text-poppy-light">$9.50</span></h2>
+            <p class="mt-3 text-white/75">Monday &ndash; Saturday, 10.30am &ndash; 12noon. Pop in, put your feet up and enjoy.</p>
+          </div>
+          <button class="img-zoom w-full sm:w-64 h-48 sm:h-full cursor-zoom-in" data-lightbox data-caption="Weekday Special - Coffee &amp; Scone $9.50, Monday to Saturday 10.30am-12noon" data-full="../assets/img/menu/weekday-special.jpg">
+            <img class="w-full h-full object-cover" src="../assets/img/menu/weekday-special.jpg" alt="Weekday Special: Coffee and scone for $9.50, Monday to Saturday 10.30am to 12noon" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Menu (real menu, transcribed for readability + full-size images) -->
+    <section id="menu" class="bg-white py-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center">
+          <p class="reveal eyebrow poppy-divider">2026 Winter Menu</p>
+          <h2 class="reveal font-display text-4xl font-bold mt-4">Our Menu</h2>
+          <p class="reveal mt-4 text-navy/60 text-sm max-w-2xl mx-auto">Menus change with the seasons. Dietary tags: <strong>GF</strong> gluten free &middot; <strong>GFA</strong> gluten free available &middot; <strong>DF</strong> dairy free &middot; <strong>DFA</strong> dairy free available &middot; <strong>V</strong> vegetarian &middot; <strong>VE</strong> vegan. Phone <a href="tel:+6433137123" class="text-poppy font-semibold hover:underline">03 313 7123</a> for today's specials.</p>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-3 gap-x-12 gap-y-12">
+          <div class="reveal">
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3">Starters</h3>
+            <ul class="mt-5 space-y-4">
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Warm Garlic &amp; Cheesy Bread <span class="text-poppy text-xs font-bold align-middle">V</span></p></div><span class="font-display font-bold shrink-0">$12</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Soup of the Day <span class="text-poppy text-xs font-bold align-middle">GFA</span></p><p class="text-sm text-navy/60">Served with garlic focaccia</p></div><span class="font-display font-bold shrink-0">$20</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Seafood Chowder</p><p class="text-sm text-navy/60">Hearty &amp; rich, served with garlic focaccia</p></div><span class="font-display font-bold shrink-0">$27</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Cheesy Croquettes <span class="text-poppy text-xs font-bold align-middle">V</span></p><p class="text-sm text-navy/60">With a rich, creamy cheese dipping sauce</p></div><span class="font-display font-bold shrink-0">$20</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Creamy Garlic Prawns <span class="text-poppy text-xs font-bold align-middle">GF</span></p><p class="text-sm text-navy/60">With a zesty lemon &amp; herb rice</p></div><span class="font-display font-bold shrink-0">$22</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Crispy Fried Cauliflower <span class="text-poppy text-xs font-bold align-middle">V</span></p><p class="text-sm text-navy/60">Loaded with a cheese sauce, spring onions &amp; pickled cabbage</p></div><span class="font-display font-bold shrink-0">$20</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Crispy Chicken Bites <span class="text-poppy text-xs font-bold align-middle">GFA</span></p><p class="text-sm text-navy/60">Served with chipotle mayo</p></div><span class="font-display font-bold shrink-0">$20</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Pork Belly Bites <span class="text-poppy text-xs font-bold align-middle">GF, DF</span></p><p class="text-sm text-navy/60">With smokey BBQ sauce</p></div><span class="font-display font-bold shrink-0">$20</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Salt &amp; Pepper Squid</p><p class="text-sm text-navy/60">Served with aioli</p></div><span class="font-display font-bold shrink-0">$20</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Bar Basket</p><p class="text-sm text-navy/60">Wontons, spring rolls, samosas, mac &amp; cheese bites, onion rings &amp; fries</p></div><span class="font-display font-bold shrink-0">$26</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Seafood Basket</p><p class="text-sm text-navy/60">Prawns, squid rings, crab stick, fish bites &amp; fries</p></div><span class="font-display font-bold shrink-0">$27</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Loaded Fries <span class="text-poppy text-xs font-bold align-middle">GF</span></p><p class="text-sm text-navy/60">Cheese, bacon, sweet chilli &amp; sour cream</p></div><span class="font-display font-bold shrink-0">$19</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Toasted Sandwiches <span class="text-poppy text-xs font-bold align-middle">GFA, V</span></p><p class="text-sm text-navy/60">Ham &amp; cheese or cheese &amp; onion &middot; extra fillings $0.90</p></div><span class="font-display font-bold shrink-0">$9</span></li>
+            </ul>
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3 mt-10">Sides</h3>
+            <p class="mt-4 text-sm text-navy/75 leading-relaxed">Fries $10 &middot; Wedges $11 &middot; Two Eggs $5 &middot; Coleslaw $8 &middot; Green Salad $8 &middot; Seasonal Vegetables $8 &middot; Onion Rings $9</p>
+          </div>
+
+          <div class="reveal delay-1">
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3">Light Meals</h3>
+            <ul class="mt-5 space-y-4">
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Crispy Fried Chicken Salad <span class="text-poppy text-xs font-bold align-middle">GFA</span></p><p class="text-sm text-navy/60">With lettuce, bacon, aioli &amp; camembert</p></div><span class="font-display font-bold shrink-0">$28</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Signature Wraps <span class="text-poppy text-xs font-bold align-middle">V</span></p><p class="text-sm text-navy/60">Fried crispy chicken or crispy cauliflower, lettuce, cheese, coleslaw, onion &amp; chipotle mayo with fries</p></div><span class="font-display font-bold shrink-0">$27</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Open Steak Sandwich <span class="text-poppy text-xs font-bold align-middle">GFA</span></p><p class="text-sm text-navy/60">On toasted focaccia with lettuce, tomato, swiss cheese &amp; caramelised onion with fries</p></div><span class="font-display font-bold shrink-0">$32</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Double Beef &amp; Bacon Cheeseburger <span class="text-poppy text-xs font-bold align-middle">GFA</span></p><p class="text-sm text-navy/60">Double patties, cheese, bacon, onion rings &amp; pickles with BBQ sauce &amp; fries</p></div><span class="font-display font-bold shrink-0">$29</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Chicken Stir-Fry <span class="text-poppy text-xs font-bold align-middle">V on request, DF</span></p><p class="text-sm text-navy/60">Udon noodles with seasonal vegetables in an Asian-style sauce with crispy shallots</p></div><span class="font-display font-bold shrink-0">$28</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Roasted Vegetable Stack <span class="text-poppy text-xs font-bold align-middle">V, VE, GF, DF</span></p><p class="text-sm text-navy/60">Crispy potato rosti, layered seasonal veg &amp; basil drizzle &middot; add fried chicken $36</p></div><span class="font-display font-bold shrink-0">$28</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">All Day Breakfast <span class="text-poppy text-xs font-bold align-middle">GFA, DF</span></p><p class="text-sm text-navy/60">Crispy bacon, sausage, hash browns, mushrooms, fried eggs &amp; toast</p></div><span class="font-display font-bold shrink-0">$27</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Penne Pasta <span class="text-poppy text-xs font-bold align-middle">V</span></p><p class="text-sm text-navy/60">Mushroom, sundried tomato, spinach &amp; onion topped with feta &amp; parmesan crumble</p></div><span class="font-display font-bold shrink-0">$28</span></li>
+            </ul>
+            <div class="mt-8 rounded-2xl border-2 border-navy/15 bg-cream p-5">
+              <p class="font-display text-xl font-bold text-navy">Parmy Army <span class="text-poppy">$29</span></p>
+              <p class="text-sm text-navy/70 mt-1">Chicken schnitzel with salad &amp; fries - your choice of topping:</p>
+              <ul class="mt-2 text-sm text-navy/70 space-y-1">
+                <li><strong>Classic</strong> &ndash; napoli sauce, ham &amp; cheese</li>
+                <li><strong>Italiano</strong> &ndash; napoli sauce, olives, sundried tomato feta, basil pesto</li>
+                <li><strong>Hawaiian</strong> &ndash; napoli sauce, ham, pineapple &amp; cheese</li>
+                <li><strong>Mexican</strong> &ndash; chilli beans, salsa, cheese &amp; crushed corn chips</li>
+                <li><strong>Indian</strong> &ndash; rich curry sauce, cheese &amp; crispy onions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal delay-2">
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3">Mains</h3>
+            <ul class="mt-5 space-y-4">
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Coconut Prawn Curry <span class="text-poppy text-xs font-bold align-middle">GF, V on request</span></p><p class="text-sm text-navy/60">Creamy Sri Lankan-style curry served with fragrant rice &amp; a poppadom</p></div><span class="font-display font-bold shrink-0">$33</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Pork Belly <span class="text-poppy text-xs font-bold align-middle">GF, DF</span></p><p class="text-sm text-navy/60">Slow cooked overnight on crispy potatoes with seasonal greens, apple &amp; fennel chutney, jus &amp; crackle</p></div><span class="font-display font-bold shrink-0">$33</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Chicken Breast <span class="text-poppy text-xs font-bold align-middle">GF</span></p><p class="text-sm text-navy/60">Infused with lemon &amp; thyme on potato gratin with broccolini &amp; creamy mushroom sauce</p></div><span class="font-display font-bold shrink-0">$34</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Lamb Shank <span class="text-poppy text-xs font-bold align-middle">GF</span></p><p class="text-sm text-navy/60">Braised in red wine, served with kumara &amp; potato mash &amp; seasonal greens &middot; add a shank $44</p></div><span class="font-display font-bold shrink-0">$34</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Sirloin 250gm Steak <span class="text-poppy text-xs font-bold align-middle">GF, DF</span></p><p class="text-sm text-navy/60">With salad &amp; fries &middot; choose gravy, mushroom sauce or garlic butter &middot; add 3 prawns $5, 2 fried eggs $5, 4 onion rings $3</p></div><span class="font-display font-bold shrink-0">$41</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Fish &amp; Chips <span class="text-poppy text-xs font-bold align-middle">GFA</span></p><p class="text-sm text-navy/60">Beer battered fish with salad, fries &amp; tartare sauce</p></div><span class="font-display font-bold shrink-0">Sm $28 / Lg $33</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Roast of the Day <span class="text-poppy text-xs font-bold align-middle">GFA, DF</span></p><p class="text-sm text-navy/60">Potatoes, pumpkin, parsnip, carrot, seasonal greens, gravy &amp; condiments</p></div><span class="font-display font-bold shrink-0">$29</span></li>
+            </ul>
+            <div class="mt-8 rounded-2xl border-2 border-poppy/25 bg-poppy/5 p-5">
+              <p class="font-display text-xl font-bold text-navy">Club Classics <span class="text-poppy">$20</span></p>
+              <p class="text-sm text-navy/70 mt-1">Small meals, no substitutions:</p>
+              <ul class="mt-2 text-sm text-navy/70 space-y-1">
+                <li>Soup of the Day <span class="text-poppy text-xs font-bold">GFA</span> with garlic focaccia</li>
+                <li>Small Seafood Chowder with garlic focaccia</li>
+                <li>Fish &amp; Chips with salad</li>
+                <li>Chicken Schnitzel, fries, salad &amp; apricot sauce</li>
+                <li>Roast of the Day <span class="text-poppy text-xs font-bold">GFA</span> with potato, pumpkin, peas &amp; gravy</li>
+                <li>Sausages with fried egg, chips &amp; gravy <span class="text-poppy text-xs font-bold">GF</span></li>
+                <li>Cheesy Croquettes <span class="text-poppy text-xs font-bold">V</span> with dipping sauce</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 grid md:grid-cols-3 gap-x-12 gap-y-10 border-t border-navy/10 pt-14">
+          <div class="reveal">
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3">Desserts</h3>
+            <ul class="mt-5 space-y-4">
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Apple &amp; Cinnamon Crumble Cake</p><p class="text-sm text-navy/60">With vanilla bean custard &amp; ice cream</p></div><span class="font-display font-bold shrink-0">$16.50</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Warm Chocolate Brownie <span class="text-poppy text-xs font-bold align-middle">GF</span></p><p class="text-sm text-navy/60">Blueberry compote, chocolate fudge sauce &amp; cream</p></div><span class="font-display font-bold shrink-0">$16.50</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Sticky Date Pudding <span class="text-poppy text-xs font-bold align-middle">GFA</span></p><p class="text-sm text-navy/60">Butterscotch sauce, cream &amp; ice cream</p></div><span class="font-display font-bold shrink-0">$16.50</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Spiced Winter Chai Brulee <span class="text-poppy text-xs font-bold align-middle">GFA</span></p><p class="text-sm text-navy/60">Served with homemade white chocolate shortbread</p></div><span class="font-display font-bold shrink-0">$16.50</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Today's Cheesecake</p><p class="text-sm text-navy/60">Served with ice cream</p></div><span class="font-display font-bold shrink-0">$16.50</span></li>
+              <li class="flex justify-between gap-6"><div><p class="font-semibold">Ice Cream Sundaes <span class="text-poppy text-xs font-bold align-middle">GFA</span></p><p class="text-sm text-navy/60">Berry, chocolate or caramel</p></div><span class="font-display font-bold shrink-0">Sm $7 / Lg $12</span></li>
+            </ul>
+          </div>
+
+          <div class="reveal delay-1">
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3">Special Coffees <span class="text-navy/50 text-lg font-normal">$13</span></h3>
+            <ul class="mt-5 space-y-4">
+              <li><p class="font-semibold">Baileys Latte</p><p class="text-sm text-navy/60">Topped with whipped cream &amp; chocolate sprinkles</p></li>
+              <li><p class="font-semibold">Gingerbread Rum Latte</p><p class="text-sm text-navy/60">Topped with whipped cream &amp; cinnamon</p></li>
+              <li><p class="font-semibold">Irish Coffee</p><p class="text-sm text-navy/60">Whisky &amp; black coffee, topped with whipped cream &amp; coffee beans</p></li>
+              <li><p class="font-semibold">Deluxe Mint Hot Chocolate <span class="text-navy/50 font-normal">$11 &middot; non-alcoholic</span></p><p class="text-sm text-navy/60">Topped with whipped cream, chocolate &amp; chocolate wafers</p></li>
+            </ul>
+          </div>
+
+          <div class="reveal delay-2">
+            <h3 class="font-display text-2xl font-bold text-poppy border-b-2 border-poppy/20 pb-3">Kids Meals <span class="text-navy/50 text-lg font-normal">$16</span></h3>
+            <p class="text-xs text-navy/50 -mt-1 mb-3">12 years &amp; under &middot; includes ice cream sundae (chocolate, berry or caramel)</p>
+            <ul class="mt-5 space-y-2 text-sm text-navy/75">
+              <li>Ham &amp; Cheese Toasted Sandwich with fries <span class="text-poppy text-xs font-bold">GFA</span></li>
+              <li>Cheeseburger &amp; fries</li>
+              <li>Fried Chicken Bites &amp; fries <span class="text-poppy text-xs font-bold">GFA</span></li>
+              <li>Roast of the Day <span class="text-poppy text-xs font-bold">GFA</span></li>
+              <li>Hot Dog &amp; fries</li>
+              <li>Fish &amp; Chips</li>
+              <li>Mac &amp; Cheese Bites &amp; Chips</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Our Weekly Rituals -->
+        <div class="reveal mt-16 rounded-3xl bg-navy text-white p-8 sm:p-12">
+          <div class="flex flex-wrap items-baseline gap-3 justify-center sm:justify-start">
+            <h3 class="font-display text-3xl font-bold">Our Weekly Rituals</h3>
+            <span class="font-display text-2xl font-bold text-poppy-light">$22 each</span>
+          </div>
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+            <div><p class="text-poppy-light font-bold uppercase tracking-wider text-sm">Monday</p><p class="mt-1 font-display text-xl font-bold">Wraps</p></div>
+            <div><p class="text-poppy-light font-bold uppercase tracking-wider text-sm">Tuesday</p><p class="mt-1 font-display text-xl font-bold">Fish &amp; Chips</p></div>
+            <div><p class="text-poppy-light font-bold uppercase tracking-wider text-sm">Wednesday</p><p class="mt-1 font-display text-xl font-bold">Steak &amp; Chips</p></div>
+            <div><p class="text-poppy-light font-bold uppercase tracking-wider text-sm">Thursday</p><p class="mt-1 font-display text-xl font-bold">Parmy Army</p></div>
+            <div><p class="text-poppy-light font-bold uppercase tracking-wider text-sm">Friday</p><p class="mt-1 font-display text-xl font-bold">Snack Basket</p></div>
+            <div><p class="text-poppy-light font-bold uppercase tracking-wider text-sm">Saturday</p><p class="mt-1 font-display text-xl font-bold">Pork Ribs</p></div>
+            <div><p class="text-poppy-light font-bold uppercase tracking-wider text-sm">Sunday</p><p class="mt-1 font-display text-xl font-bold">Roast</p></div>
+          </div>
+          <p class="mt-6 text-center sm:text-left text-white/50 text-xs">No substitutions to Weekly Rituals. Menu items &amp; prices are subject to change, dependent on availability.</p>
+        </div>
+
+        <!-- Club promotions -->
+        <div class="mt-10 grid sm:grid-cols-3 gap-5">
+          <div class="reveal card-hover bg-white border-2 border-navy/10 rounded-2xl p-6 text-center">
+            <p class="eyebrow">Thu, Fri &amp; Sat</p>
+            <p class="font-display text-xl font-bold mt-2">Meat Raffles</p>
+          </div>
+          <div class="reveal delay-1 card-hover bg-white border-2 border-navy/10 rounded-2xl p-6 text-center">
+            <p class="eyebrow">Every Friday, 6&ndash;6.30pm</p>
+            <p class="font-display text-xl font-bold mt-2">Weekly Tower of Cash</p>
+          </div>
+          <div class="reveal delay-2 card-hover bg-white border-2 border-navy/10 rounded-2xl p-6 text-center">
+            <p class="eyebrow">Every Saturday</p>
+            <p class="font-display text-xl font-bold mt-2">Grocery Grab</p>
+          </div>
+        </div>
+
+        <!-- Full-size menu images -->
+        <div class="mt-16 text-center">
+          <p class="reveal eyebrow">Prefer to browse the original?</p>
+          <h3 class="reveal font-display text-2xl font-bold mt-2">View the Full Menu Boards</h3>
+          <div class="reveal mt-8 grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <button class="img-zoom rounded-2xl overflow-hidden shadow-lg cursor-zoom-in aspect-[10/7]" data-lightbox data-caption="Spitfire on Victoria - Starters, Light Meals &amp; Mains" data-full="../assets/img/menu/spitfire-menu-mains.jpg">
+              <img class="w-full h-full object-cover" src="../assets/img/menu/spitfire-menu-mains.jpg" alt="Spitfire on Victoria 2026 Winter Menu - Starters, Light Meals and Mains" loading="lazy">
+            </button>
+            <button class="img-zoom rounded-2xl overflow-hidden shadow-lg cursor-zoom-in aspect-[10/7]" data-lightbox data-caption="Spitfire on Victoria - Desserts, Special Coffees, Kids Meals &amp; Weekly Rituals" data-full="../assets/img/menu/spitfire-menu-desserts.jpg">
+              <img class="w-full h-full object-cover" src="../assets/img/menu/spitfire-menu-desserts.jpg" alt="Spitfire on Victoria 2026 Winter Menu - Desserts, Special Coffees, Kids Meals and Weekly Rituals" loading="lazy">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-navy-dark/90 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button data-lb-close class="absolute top-5 right-5 text-white/80 hover:text-white p-2" aria-label="Close">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M6 18 18 6"/></svg>
+      </button>
+      <button data-lb-prev class="absolute left-3 sm:left-8 text-white/80 hover:text-white p-2" aria-label="Previous image">
+        <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <figure class="max-w-5xl w-full text-center">
+        <img class="mx-auto rounded-xl" src="" alt="">
+        <figcaption id="lightbox-caption" class="mt-4 text-white/80 text-sm"></figcaption>
+      </figure>
+      <button data-lb-next class="absolute right-3 sm:right-8 text-white/80 hover:text-white p-2" aria-label="Next image">
+        <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- Booking CTA -->
+    <section class="relative py-24 overflow-hidden">
+      <img class="absolute inset-0 w-full h-full object-cover" src="../assets/img/function-table-styling.jpg" alt="A beautifully set table ready for a celebration" loading="lazy">
+      <div class="absolute inset-0 bg-navy/80"></div>
+      <div class="relative z-10 max-w-3xl mx-auto px-4 text-center text-white">
+        <h2 class="reveal font-display text-4xl font-bold">Celebrating something special?</h2>
+        <p class="reveal mt-4 text-white/80 text-lg">The Spitfire caters for groups and special occasions - and our private function rooms seat 12 to 200.</p>
+        <div class="reveal mt-8 flex flex-wrap justify-center gap-4">
+          <a href="tel:+6433137123" class="btn-primary">Call 03 313 7123</a>
+          <a href="../functions.html#enquiry" class="btn-secondary">Function Enquiry</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy-dark text-white">
+    <div class="h-1 bg-gradient-to-r from-poppy via-poppy-light to-poppy"></div>
+    <div class="max-w-7xl mx-auto px-4 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl font-bold">Rangiora RSA <span class="text-poppy-light">Club</span></p>
+        <p class="mt-4 text-white/60 text-sm leading-relaxed">A friendly atmosphere for members, guests and visitors - for any occasion. Proudly serving our community since 1919.</p>
+        <p class="mt-4 text-white/60 text-sm italic">"Meet people, share stories, have a laugh and help out in your community."</p>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Explore</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li><a class="hover:text-poppy-light" href="../about.html">About &amp; History</a></li>
+          <li><a class="hover:text-poppy-light" href="../facilities.html">Our Club</a></li>
+          <li><a class="hover:text-poppy-light" href="../functions.html">Functions &amp; Venue Hire</a></li>
+          <li><a class="hover:text-poppy-light" href="./">The Spitfire on Victoria</a></li>
+          <li><a class="hover:text-poppy-light" href="../whats-on.html">News &amp; Events</a></li>
+          <li><a class="hover:text-poppy-light" href="../membership.html">Join / Renew Membership</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Visit Us</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li>82 Victoria Street<br>Rangiora, Canterbury 7400</li>
+          <li><a class="hover:text-poppy-light" href="tel:+6433137123">03 313 7123</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rangiorarsa@gmail.com">rangiorarsa@gmail.com</a></li>
+          <li><a class="hover:text-poppy-light" href="mailto:rgarsafunctions@gmail.com">rgarsafunctions@gmail.com</a> <span class="text-white/40">(functions)</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold uppercase tracking-widest text-sm text-white/80">Hours</p>
+        <ul class="mt-4 space-y-2.5 text-white/60 text-sm">
+          <li class="flex justify-between gap-4"><span>Mon &ndash; Sat</span><span>10.30am &ndash; 11.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Sunday</span><span>11.00am &ndash; 10.00pm</span></li>
+          <li class="flex justify-between gap-4"><span>Bar meals</span><span>Daily from 11.30am</span></li>
+          <li class="flex justify-between gap-4"><span>Restaurant</span><span>11.30am &ndash; 8.00pm</span></li>
+        </ul>
+        <a href="../membership.html" class="btn-primary mt-6 text-sm">Join Now</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/45 text-xs">
+        <p>&copy; <span data-year>2026</span> Rangiora RSA Club (Inc). All rights reserved.</p>
+        <p class="flex items-center gap-2">Built by <a href="https://openflow.fun" target="_blank" rel="noopener" aria-label="OpenFlow website"><img src="../assets/img/openflow-wordmark.png" alt="OpenFlow" class="h-5 w-auto hover:opacity-80 transition-opacity"></a><span class="text-white/45">&middot; Digital without limits</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-poppy text-white shadow-lg shadow-poppy/40 flex items-center justify-center hover:bg-poppy-dark" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
