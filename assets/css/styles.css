@@ -232,10 +232,19 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   .cta-compact { font-size: .8125rem; padding: .7rem .9rem; white-space: nowrap; }
 }
 
-/* Mobile menu: always fits on screen (scrolls inside if needed) */
-#mobile-menu { max-height: calc(100vh - 7rem); max-height: calc(100dvh - 7rem); overscroll-behavior: contain; }
-@media (max-width: 639px) {
-  #mobile-menu > div { padding: .5rem 1.5rem 1.25rem !important; font-size: .9375rem !important; text-align: center; }
-  #mobile-menu a.block { padding: .55rem 0 !important; }
-  #mobile-menu .btn-primary { margin-top: .75rem !important; width: 100%; font-size: .9375rem; }
+/* Mobile menu: compact grid so it always fits on screen - no scrolling */
+@media (max-width: 639px), (max-height: 520px) {
+  #mobile-menu { max-height: none !important; overflow: visible !important; }
+  #mobile-menu > div {
+    display: grid !important; grid-template-columns: repeat(2, 1fr); column-gap: .5rem; row-gap: 0;
+    padding: .5rem 1.25rem 1rem !important; font-size: .9375rem !important; text-align: center;
+  }
+  #mobile-menu > div > a { margin-top: 0 !important; }
+  #mobile-menu a.block { padding: .6rem 0 !important; }
+  #mobile-menu .btn-primary { grid-column: 1 / -1; margin-top: .75rem !important; width: 100%; font-size: .9375rem; }
+}
+@media (max-height: 520px) and (min-width: 640px) {
+  #mobile-menu > div { grid-template-columns: repeat(3, 1fr); padding-top: .25rem !important; padding-bottom: .5rem !important; }
+  #mobile-menu a.block { padding: .3rem 0 !important; }
+  #mobile-menu .btn-primary { margin-top: .4rem !important; padding-top: .55rem; padding-bottom: .55rem; }
 }
