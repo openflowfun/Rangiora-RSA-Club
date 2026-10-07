@@ -252,3 +252,21 @@
     heroVideo.muted = true; // enforce muted default regardless of autoplay policy
   }
 })();
+
+/* ---------------- Photo slideshows: swap every 2 seconds ---------------- */
+(function () {
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.querySelectorAll("[data-slideshow]").forEach(function (box) {
+    var imgs = box.querySelectorAll(".ss-img");
+    if (imgs.length < 2) return;
+    var i = 0;
+    setTimeout(function () {
+      setInterval(function () {
+        imgs[i].classList.remove("is-on");
+        i = (i + 1) % imgs.length;
+        if (imgs[i].loading === "lazy") imgs[i].loading = "eager";
+        imgs[i].classList.add("is-on");
+      }, 2000);
+    }, parseInt(box.getAttribute("data-delay") || "0", 10));
+  });
+})();

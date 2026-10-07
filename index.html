@@ -25,11 +25,6 @@
     };
   </script>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <style>
-    /* Explore the Club slideshows */
-    .img-zoom .ss-img{opacity:0;transition:opacity .8s ease,transform .6s cubic-bezier(.22,1,.36,1)}
-    .img-zoom .ss-img.is-on{opacity:1}
-  </style>
 </head>
 <body class="font-body text-navy bg-cream">
 
@@ -259,7 +254,7 @@
 
     <!-- ===================== SPITFIRE RESTAURANT FEATURE ===================== -->
     <section class="relative py-28 overflow-hidden" aria-label="Spitfire Restaurant">
-      <img class="parallax-img absolute inset-0 w-full h-full object-cover" data-parallax src="assets/img/spitfire-hero-food.jpg" alt="Fine dining plated meal at The Spitfire Restaurant" loading="lazy">
+      <div class="parallax-img absolute inset-0" data-parallax data-slideshow data-delay="0"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/restaurant-dining.jpg" alt="The Spitfire Restaurant dining room"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/spitfire-function-1.jpg" alt="The Spitfire Restaurant set for a function" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/spitfire-function-2.jpg" alt="The Spitfire Restaurant set for a celebration" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/function-table-styling.jpg" alt="A table set for dinner at the Spitfire" loading="lazy"></div>
       <div class="absolute inset-0 bg-navy/80"></div>
       <div class="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
         <p class="reveal eyebrow text-poppy-light">The Spitfire on Victoria</p>
@@ -277,7 +272,7 @@
 
     <!-- ===================== FUNCTIONS PREVIEW ===================== -->
     <section class="relative py-28 overflow-hidden" aria-label="Functions and venue hire">
-      <img class="parallax-img absolute inset-0 w-full h-full object-cover" data-parallax src="assets/img/rooms/kippenberger-joint.jpg" alt="Kippenberger Function Rooms set up for a large event" loading="lazy">
+      <div class="parallax-img absolute inset-0" data-parallax data-slideshow data-delay="1000"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/rooms/kippenberger-joint.jpg" alt="Kippenberger Function Rooms joined for a large event"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/kippenberger-room2-round.jpg" alt="Kippenberger Function Room 2 with round tables" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/fraser-room-1.jpg" alt="The Fraser Room" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/kippenberger-room1-dining.jpg" alt="Kippenberger Function Room 1 long tables" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/spitfire-function-2.jpg" alt="The Spitfire Restaurant set for a celebration" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/function-dance-floor.jpg" alt="The function room dance floor" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/kippenberger-room1-theatre.jpg" alt="Kippenberger Room 1 theatre style" loading="lazy"></div>
       <div class="absolute inset-0 bg-navy/80"></div>
       <div class="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
         <p class="reveal eyebrow text-poppy-light">Functions &amp; Venue Hire</p>
@@ -310,7 +305,7 @@
             </div>
           </a>
           <a href="the-spitfire-on-victoria/" class="reveal delay-1 card-hover group bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5">
-            <div class="img-zoom h-56 relative" data-slideshow data-delay="600"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/restaurant-dining.jpg" alt="Spitfire restaurant tables set for service"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-spitfire-mural-exterior.jpg" alt="The Spitfire mural outside the club" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/spitfire-function-1.jpg" alt="The Spitfire restaurant set for a function" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/food/food-double-smash-burger.jpg" alt="Double smash burger from the Spitfire kitchen" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/food/dessert-summer-pavlova-stack.jpg" alt="Summer pavlova stack dessert" loading="lazy"></div>
+            <div class="img-zoom h-56 relative" data-slideshow data-delay="600"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/restaurant-dining.jpg" alt="Spitfire restaurant tables set for service"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/spitfire-function-1.jpg" alt="The Spitfire restaurant set for a function" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/food/food-double-smash-burger.jpg" alt="Double smash burger from the Spitfire kitchen" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/food/dessert-summer-pavlova-stack.jpg" alt="Summer pavlova stack dessert" loading="lazy"></div>
             <div class="p-7">
               <h3 class="font-display text-2xl font-bold group-hover:text-poppy transition-colors">Spitfire Restaurant</h3>
               <p class="mt-2 text-navy/70">Open to all guests 7 days a week - dine in or takeaway, from 11.30am daily.</p>
@@ -515,25 +510,6 @@
     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
   </button>
 
-  <script>
-    /* Explore the Club: swap each card's photos every 2 seconds */
-    (function(){
-      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce) return;
-      document.querySelectorAll('[data-slideshow]').forEach(function(box){
-        var imgs = box.querySelectorAll('.ss-img'); if (imgs.length < 2) return;
-        var i = 0;
-        setTimeout(function(){
-          setInterval(function(){
-            imgs[i].classList.remove('is-on');
-            i = (i + 1) % imgs.length;
-            if (imgs[i].loading === 'lazy') imgs[i].loading = 'eager';
-            imgs[i].classList.add('is-on');
-          }, 2000);
-        }, parseInt(box.getAttribute('data-delay') || '0', 10));
-      });
-    })();
-  </script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

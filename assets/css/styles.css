@@ -212,3 +212,7 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 ::-webkit-scrollbar-track { background: var(--cream); }
 ::-webkit-scrollbar-thumb { background: #c9c2b8; border-radius: 8px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--poppy); }
+
+/* Photo slideshows (data-slideshow): photos fade between each other */
+[data-slideshow] .ss-img { opacity: 0; transition: opacity .8s ease, transform .6s cubic-bezier(.22,1,.36,1); }
+[data-slideshow] .ss-img.is-on { opacity: 1; }
