@@ -70,6 +70,8 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 .dropdown a { display: block; padding: .55rem .9rem; border-radius: .5rem; font-weight: 500; color: var(--navy); }
 .dropdown a:hover { background: var(--cream); color: var(--poppy); }
 
+#site-header { transition: transform .3s ease, box-shadow .3s ease; will-change: transform; }
+#site-header.nav-hidden { transform: translateY(-100%); }
 #site-header.scrolled { box-shadow: 0 6px 24px rgba(17,28,46,.08); }
 
 /* --------------------------------------------------------------------------

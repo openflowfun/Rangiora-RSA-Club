@@ -33,9 +33,35 @@
 
   /* ---------------- Sticky header shadow ---------------- */
   const header = document.getElementById("site-header");
-  const onScrollHeader = () => header && header.classList.toggle("scrolled", window.scrollY > 10);
-  window.addEventListener("scroll", onScrollHeader, { passive: true });
-  onScrollHeader();
+  /* Hide the header when scrolling down, show it again when scrolling up. */
+  let lastY = window.scrollY;
+  let headerTicking = false;
+  const updateHeader = () => {
+    headerTicking = false;
+    if (!header) return;
+    const y = Math.max(window.scrollY, 0);
+    header.classList.toggle("scrolled", y > 10);
+    const menuOpen = mobileMenu && !mobileMenu.classList.contains("hidden");
+    const delta = y - lastY;
+    if (menuOpen || y < 80) {
+      header.classList.remove("nav-hidden");
+    } else if (delta > 6) {
+      header.classList.add("nav-hidden");
+    } else if (delta < -6) {
+      header.classList.remove("nav-hidden");
+    }
+    if (Math.abs(delta) > 6) lastY = y;
+  };
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!headerTicking) { headerTicking = true; requestAnimationFrame(updateHeader); }
+    },
+    { passive: true }
+  );
+  // Reveal the header if keyboard focus lands inside it
+  if (header) header.addEventListener("focusin", () => header.classList.remove("nav-hidden"));
+  updateHeader();
 
   /* ---------------- Scroll-reveal ---------------- */
   const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-zoom");
@@ -260,8 +286,13 @@
     var imgs = box.querySelectorAll(".ss-img");
     if (imgs.length < 2) return;
     var i = 0;
+    var visible = true;
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }).observe(box);
+    }
     setTimeout(function () {
       setInterval(function () {
+        if (!visible || document.hidden) return;
         imgs[i].classList.remove("is-on");
         i = (i + 1) % imgs.length;
         if (imgs[i].loading === "lazy") imgs[i].loading = "eager";
