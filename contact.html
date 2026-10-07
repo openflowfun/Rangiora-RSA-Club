@@ -160,8 +160,8 @@
         <div class="reveal-left">
           <p class="eyebrow">Send a Message</p>
           <h2 class="font-display text-4xl font-bold mt-3">Drop us a line</h2>
-          <!-- Formspree: replace YOUR_FORM_ID with your form ID (see README.md) -->
-          <form class="mt-8 grid sm:grid-cols-2 gap-5 bg-white rounded-2xl p-8 shadow-lg shadow-navy/5" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-formspree>
+          <!-- Form posts to /api/submit (Cloudflare Pages Function, see README.md) -->
+          <form class="mt-8 grid sm:grid-cols-2 gap-5 bg-white rounded-2xl p-8 shadow-lg shadow-navy/5" action="/api/submit" method="POST" data-form>
             <div>
               <label class="form-label" for="c-first">First name *</label>
               <input class="form-input" id="c-first" name="first_name" type="text" required autocomplete="given-name">
@@ -183,6 +183,7 @@
               <textarea class="form-input" id="c-message" name="message" rows="5" required></textarea>
             </div>
             <input type="hidden" name="_subject" value="Contact form - rangiorarsa.nz">
+          <input type="hidden" name="_form" value="contact">
             <!-- Honeypot spam trap -->
             <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="sm:col-span-2">

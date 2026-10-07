@@ -453,11 +453,12 @@
       <div class="max-w-2xl mx-auto px-4">
         <h2 class="reveal font-display text-3xl font-bold">Never miss an update</h2>
         <p class="reveal mt-3 text-navy/70">Join the mailing list for the latest news and event information.</p>
-        <!-- Formspree: replace YOUR_FORM_ID (see README.md) -->
-        <form class="reveal mt-7 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-formspree>
+        <!-- Form posts to /api/submit (Cloudflare Pages Function, see README.md) -->
+        <form class="reveal mt-7 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" action="/api/submit" method="POST" data-form>
           <label class="sr-only" for="ev-email">Email address</label>
           <input id="ev-email" type="email" name="email" required placeholder="Your email address" class="form-input flex-1">
           <input type="hidden" name="_subject" value="Newsletter signup - rangiorarsa.nz">
+          <input type="hidden" name="_form" value="newsletter">
           <button type="submit" class="btn-primary">Subscribe</button>
         </form>
         <p class="form-note hidden mt-3 text-sm text-poppy"></p>

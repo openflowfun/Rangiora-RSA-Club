@@ -31,18 +31,21 @@ A modern, fully static, multi-page website for the **Rangiora RSA Club** (82 Vic
 4. After a minute your site is live at `https://YOUR-USERNAME.github.io/rangiora-rsa-website/`.
 5. Custom domain (e.g. rangiorarsa.nz): in **Settings → Pages → Custom domain**, enter the domain, then at your DNS provider add a CNAME record pointing `www` to `YOUR-USERNAME.github.io` (and A records for the apex — GitHub's docs list the four IPs). Tick **Enforce HTTPS**.
 
-## Connect the forms (Formspree — free tier)
+## Forms (Cloudflare Pages Function + Resend)
 
-The membership application, function enquiry, contact form and newsletter signups all post to Formspree.
+All five forms post to `/api/submit` (`functions/api/submit.js`), which emails the club. Routing is set at the top of that file:
 
-1. Sign up free at [formspree.io](https://formspree.io) and click **New form** (e.g. "Membership applications"). Use `rangiorarsa@gmail.com` (or `rgarsafunctions@gmail.com` for the function form) as the destination email.
-2. Copy the form's ID — the part after `/f/` in the endpoint, e.g. `https://formspree.io/f/abcd1234`.
-3. In each HTML file, find `action="https://formspree.io/f/YOUR_FORM_ID"` and replace `YOUR_FORM_ID` with your ID. You can use one form for everything (the hidden `_subject` field labels each submission) or create separate forms per purpose.
-4. Until replaced, submitting a form shows a friendly on-page note instead of an error.
+- Membership and contact -> rangiorarsa@gmail.com
+- Function enquiries -> rgarsafunctions@gmail.com
+- Newsletter sign-ups -> rangiorarsa@gmail.com (swap for Mailchimp later if wanted)
 
-Files containing forms: `membership.html` (application), `facilities.html` (function enquiry), `contact.html` (contact), plus newsletter forms on `index.html`, `events.html`, `news.html`.
+Setup (club-owned accounts):
+1. Host the site on Cloudflare Pages (the `functions/` folder deploys automatically).
+2. Create a free [Resend](https://resend.com) account, verify `rangiorarsa.nz` (add the DNS records it shows) and create an API key.
+3. In Cloudflare Pages > Settings > Variables and Secrets add `RESEND_API_KEY` (secret) and `MAIL_FROM` (e.g. `Rangiora RSA Website <website@rangiorarsa.nz>`).
+4. Optional spam protection: add `TURNSTILE_SECRET`. A honeypot field is already in place.
 
-> Note: the form emails you the application details — membership payment (bank transfer/card) is then handled by the club as usual. Never collect card numbers through these forms.
+Forms only work on the deployed Cloudflare site, not when opening the HTML files directly.
 
 ## Replace the placeholder photos
 

@@ -180,21 +180,39 @@
     backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   }
 
-  /* ---------------- Forms (Formspree helper) ----------------
-     Forms post to Formspree. Replace YOUR_FORM_ID in each form's action.
-     If the action still contains the placeholder we intercept the submit
-     and show a friendly notice instead of a 404. */
-  document.querySelectorAll("form[data-formspree]").forEach((form) => {
-    form.addEventListener("submit", (e) => {
-      if (form.action.includes("YOUR_FORM_ID")) {
-        e.preventDefault();
-        const note = form.querySelector(".form-note");
-        if (note) {
-          note.textContent =
-            "Form not connected yet — create a free form at formspree.io and paste your form ID into this form's action attribute (see README.md).";
-          note.classList.remove("hidden");
-        }
+  /* ---------------- Forms ----------------
+     Forms post to /api/submit (Cloudflare Pages Function, emails the club).
+     We submit with fetch so the visitor stays on the page. */
+  document.querySelectorAll("form[data-form]").forEach((form) => {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      let note = form.querySelector(".form-note");
+      if (!note) {
+        note = document.createElement("p");
+        note.className = "form-note mt-3 text-sm basis-full";
+        form.appendChild(note);
       }
+      const btn = form.querySelector('button[type="submit"]');
+      const label = btn ? btn.textContent : "";
+      const show = (msg, ok) => {
+        note.textContent = msg;
+        note.classList.remove("hidden", "text-poppy", "text-emerald-500", "text-red-300");
+        note.classList.add(ok ? "text-emerald-500" : "text-poppy");
+      };
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      try {
+        const res = await fetch(form.action, { method: "POST", body: new FormData(form) });
+        const out = await res.json().catch(() => ({}));
+        if (res.ok && out.ok) {
+          form.reset();
+          show("Thank you! We've received your message and will be in touch soon.", true);
+        } else {
+          show(out.error || "Something went wrong. Please try again or call the club.", false);
+        }
+      } catch (err) {
+        show("Could not send. Please check your connection or call the club.", false);
+      }
+      if (btn) { btn.disabled = false; btn.textContent = label; }
     });
   });
 

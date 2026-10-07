@@ -191,8 +191,8 @@
           <h2 class="reveal font-display text-4xl font-bold mt-4">Join or renew online</h2>
           <p class="reveal mt-4 text-navy/70 text-sm max-w-xl mx-auto">I hereby apply for membership to the Rangiora RSA and Club (Inc) knowing that, as a member, I shall be bound by the Constitution &amp; Rules of the Club.</p>
         </div>
-        <!-- Formspree: replace YOUR_FORM_ID with your form ID (see README.md) -->
-        <form class="reveal mt-10 grid sm:grid-cols-2 gap-5 bg-cream rounded-2xl p-8 shadow-lg shadow-navy/5" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-formspree>
+        <!-- Form posts to /api/submit (Cloudflare Pages Function, see README.md) -->
+        <form class="reveal mt-10 grid sm:grid-cols-2 gap-5 bg-cream rounded-2xl p-8 shadow-lg shadow-navy/5" action="/api/submit" method="POST" data-form>
           <div class="sm:col-span-2">
             <span class="form-label">Are you a new or existing member? *</span>
             <div class="flex flex-wrap gap-6 mt-1">
@@ -285,6 +285,7 @@
             </label>
           </div>
           <input type="hidden" name="_subject" value="Membership application - rangiorarsa.nz">
+          <input type="hidden" name="_form" value="membership">
           <div class="sm:col-span-2">
             <button type="submit" class="btn-primary w-full sm:w-auto">Submit Application</button>
             <p class="form-note hidden mt-3 text-sm text-poppy"></p>

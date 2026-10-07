@@ -424,8 +424,8 @@
             <a href="tel:+6433137123" class="btn-ghost">03 313 7123</a>
           </div>
         </div>
-        <!-- Formspree: replace YOUR_FORM_ID with your form ID (see README.md) -->
-        <form class="reveal mt-10 grid sm:grid-cols-2 gap-5 bg-white rounded-2xl p-8 shadow-lg shadow-navy/5" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-formspree>
+        <!-- Form posts to /api/submit (Cloudflare Pages Function, see README.md) -->
+        <form class="reveal mt-10 grid sm:grid-cols-2 gap-5 bg-white rounded-2xl p-8 shadow-lg shadow-navy/5" action="/api/submit" method="POST" data-form>
           <div>
             <label class="form-label" for="fn-name">Your name *</label>
             <input class="form-input" id="fn-name" name="name" type="text" required autocomplete="name">
@@ -484,6 +484,7 @@
             <textarea class="form-input" id="fn-message" name="message" rows="4" required></textarea>
           </div>
           <input type="hidden" name="_subject" value="Function enquiry - rangiorarsa.nz">
+          <input type="hidden" name="_form" value="functions">
           <!-- Honeypot spam trap -->
           <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="sm:col-span-2">
