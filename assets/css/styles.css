@@ -218,3 +218,16 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 /* Photo slideshows (data-slideshow): photos fade between each other */
 [data-slideshow] .ss-img { opacity: 0; transition: opacity .8s ease, transform .6s cubic-bezier(.22,1,.36,1); }
 [data-slideshow] .ss-img.is-on { opacity: 1; }
+
+/* --------------------------------------------------------------------------
+   Mobile (phones): centre-aligned layout
+   -------------------------------------------------------------------------- */
+@media (max-width: 639px) {
+  main :is(h1, h2, h3, h4, p, figcaption):not(form *):not(li *):not(.keep-left),
+  footer :is(h1, h2, h3, h4, p):not(.keep-left) { text-align: center; }
+  main .flex-wrap, footer .flex-wrap { justify-content: center; }
+  main .eyebrow.flex { justify-content: center; }
+  main .max-w-3xl, main .max-w-2xl, main .max-w-xl, main .max-w-lg { margin-left: auto; margin-right: auto; }
+  /* two side-by-side call-to-action buttons on one line */
+  .cta-compact { font-size: .8125rem; padding: .7rem .9rem; white-space: nowrap; }
+}

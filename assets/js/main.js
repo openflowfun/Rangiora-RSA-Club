@@ -45,12 +45,12 @@
     const delta = y - lastY;
     if (menuOpen || y < 80) {
       header.classList.remove("nav-hidden");
-    } else if (delta > 6) {
+    } else if (delta > 4) {
       header.classList.add("nav-hidden");
-    } else if (delta < -6) {
+    } else if (delta < -4) {
       header.classList.remove("nav-hidden");
     }
-    if (Math.abs(delta) > 6) lastY = y;
+    if (Math.abs(delta) > 4) lastY = y;
   };
   window.addEventListener(
     "scroll",
