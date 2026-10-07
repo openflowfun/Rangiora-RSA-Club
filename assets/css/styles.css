@@ -231,3 +231,11 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   /* two side-by-side call-to-action buttons on one line */
   .cta-compact { font-size: .8125rem; padding: .7rem .9rem; white-space: nowrap; }
 }
+
+/* Mobile menu: always fits on screen (scrolls inside if needed) */
+#mobile-menu { max-height: calc(100vh - 7rem); max-height: calc(100dvh - 7rem); overscroll-behavior: contain; }
+@media (max-width: 639px) {
+  #mobile-menu > div { padding: .5rem 1.5rem 1.25rem !important; font-size: .9375rem !important; text-align: center; }
+  #mobile-menu a.block { padding: .55rem 0 !important; }
+  #mobile-menu .btn-primary { margin-top: .75rem !important; width: 100%; font-size: .9375rem; }
+}
