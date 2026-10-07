@@ -135,7 +135,7 @@
       <!-- Lounge bar -->
       <div id="bar" class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-14 items-center">
         <div class="reveal-left img-zoom rounded-2xl shadow-2xl shadow-navy/15 order-1">
-          <img class="w-full h-[420px] object-cover rounded-2xl" src="assets/img/Rangiora-RSA-bar.jpg" alt="The Club Main Bar with darts, pool tables and TAB" loading="lazy">
+          <div class="relative w-full h-[420px] rounded-2xl overflow-hidden" data-slideshow data-delay="0"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/Rangiora-RSA-bar.jpg" alt="The Club Main Bar and lounge"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-main-lounge-dining.jpg" alt="Main lounge and dining area with big screens" loading="lazy"></div>
         </div>
         <div class="reveal-right order-2">
           <p class="eyebrow">The Heart of the Club</p>
@@ -152,7 +152,7 @@
       <!-- Poppy Room & Courtyard -->
       <div id="poppy-room" class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-14 items-center">
         <div class="reveal-left img-zoom rounded-2xl shadow-2xl shadow-navy/15 order-1">
-          <img class="w-full h-[420px] object-cover rounded-2xl" src="assets/img/club-courtyard.jpg" alt="The Poppy Room courtyard with covered louvred pergola" loading="lazy">
+          <div class="relative w-full h-[420px] rounded-2xl overflow-hidden" data-slideshow data-delay="700"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/club-courtyard.jpg" alt="The Poppy Room courtyard with covered louvred pergola"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-louvre-tv.jpg" alt="Covered courtyard with a big screen" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-louvre-table-coffee.jpg" alt="Courtyard seating under the louvre roof" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-mural-wine-barrel.jpg" alt="Courtyard mural with wine barrel" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-outdoor-seating.jpg" alt="Outdoor seating in the courtyard" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-playground-slide.jpg" alt="Courtyard playground with a slide" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-playground-noughts-crosses.jpg" alt="Courtyard playground and tables" loading="lazy"></div>
         </div>
         <div class="reveal-right order-2">
           <p class="eyebrow">Indoor &amp; Outdoor</p>
@@ -169,7 +169,7 @@
       <!-- Gaming & sport -->
       <div id="gaming" class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-14 items-center">
         <div class="reveal-left lg:order-2 img-zoom rounded-2xl shadow-2xl shadow-navy/15">
-          <img class="w-full h-[420px] object-cover rounded-2xl" src="assets/img/club-lounge.jpg" alt="The gaming room with darts, pool and TAB" loading="lazy">
+          <div class="relative w-full h-[420px] rounded-2xl overflow-hidden" data-slideshow data-delay="1400"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/venue/venue-tab-sky-screens.jpg" alt="TAB terminal and Sky sport screens"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-snooker-pool-room.jpg" alt="Snooker and pool tables" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/club-lounge.jpg" alt="The lounge with darts, pool and TAB" loading="lazy"></div>
         </div>
         <div class="reveal-right lg:order-1">
           <p class="eyebrow">Entertainment</p>
@@ -210,11 +210,11 @@
 
       <!-- Courtesy van: ticket details and photos (added) -->
       <div class="max-w-7xl mx-auto px-4">
-        <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div class="grid lg:grid-cols-2 gap-10 items-stretch">
           <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in bg-white shadow-lg shadow-navy/5" data-lightbox data-caption="Courtesy Van: safe rides, stronger community. Call 03 313 7123 ext. 1, Thursday, Friday and Saturday from 4.30pm" data-full="assets/img/flyers/flyer-courtesy-van.jpg">
             <img class="w-full h-full object-contain" src="assets/img/flyers/flyer-courtesy-van.jpg" alt="Courtesy Van flyer: safe rides, stronger community, call 03 313 7123 ext. 1" loading="lazy">
           </button>
-          <div>
+          <div class="flex flex-col">
             <p class="reveal eyebrow">Safe Rides. Stronger Community.</p>
             <h2 class="reveal font-display text-3xl font-bold mt-2">Book your pick-up</h2>
             <p class="reveal mt-3 text-navy/75">Call us to book your pick-up on <a class="text-poppy font-semibold hover:underline" href="tel:+6433137123">03 313 7123</a> ext. 1. The van runs Thursday, Friday and Saturday from 4.30pm.</p>
@@ -222,9 +222,9 @@
               <li><strong>Gold coin pick-up service</strong> &ndash; donations are greatly appreciated to support the continued operation of the van.</li>
               <li><strong>Ticketed drop-off service</strong> &ndash; $3 per person within the 7400 Rangiora area, $5 per person for out-of-area rides. Tickets available at the bar.</li>
             </ul>
-            <div class="mt-6 grid grid-cols-2 gap-4">
-              <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="The Rangiora RSA courtesy van" data-full="assets/img/venue/venue-courtesy-van-side.jpg"><img class="w-full h-full object-cover" src="assets/img/venue/venue-courtesy-van-side.jpg" alt="The Rangiora RSA courtesy van" loading="lazy"></button>
-              <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="The club entrance and courtesy van" data-full="assets/img/venue/venue-exterior-entrance-courtesy-van.jpg"><img class="w-full h-full object-cover" src="assets/img/venue/venue-exterior-entrance-courtesy-van.jpg" alt="The club entrance with the courtesy van" loading="lazy"></button>
+            <div class="mt-6 flex-1 grid grid-rows-2 gap-4 min-h-[22rem]">
+              <button class="reveal img-zoom relative rounded-2xl overflow-hidden cursor-zoom-in min-h-[11rem]" data-lightbox data-caption="The Rangiora RSA courtesy van" data-full="assets/img/venue/venue-courtesy-van-side.jpg"><img class="absolute inset-0 w-full h-full object-cover" src="assets/img/venue/venue-courtesy-van-side.jpg" alt="The Rangiora RSA courtesy van" loading="lazy"></button>
+              <button class="reveal img-zoom relative rounded-2xl overflow-hidden cursor-zoom-in min-h-[11rem]" data-lightbox data-caption="The club entrance and courtesy van" data-full="assets/img/venue/venue-exterior-entrance-courtesy-van.jpg"><img class="absolute inset-0 w-full h-full object-cover" src="assets/img/venue/venue-exterior-entrance-courtesy-van.jpg" alt="The club entrance with the courtesy van" loading="lazy"></button>
             </div>
           </div>
         </div>
@@ -233,31 +233,25 @@
       <!-- Around the club photo strip (added) -->
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="reveal font-display text-3xl font-bold">Around the Club</h2>
-        <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="The covered courtyard with big screen" data-full="assets/img/venue/venue-courtyard-louvre-tv.jpg">
-            <img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-louvre-tv.jpg" alt="Covered courtyard with tables and a big screen" loading="lazy">
-          </button>
-          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Kids play area in the courtyard" data-full="assets/img/venue/venue-courtyard-playground-slide.jpg">
-            <img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-playground-slide.jpg" alt="Courtyard playground with a slide" loading="lazy">
-          </button>
-          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Snooker and pool room" data-full="assets/img/venue/venue-snooker-pool-room.jpg">
-            <img class="w-full h-full object-cover" src="assets/img/venue/venue-snooker-pool-room.jpg" alt="Snooker and pool tables" loading="lazy">
-          </button>
-          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="TAB and Sky screens" data-full="assets/img/venue/venue-tab-sky-screens.jpg">
-            <img class="w-full h-full object-cover" src="assets/img/venue/venue-tab-sky-screens.jpg" alt="TAB terminal and sport screens" loading="lazy">
-          </button>
-          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="The main lounge and dining area" data-full="assets/img/venue/venue-main-lounge-dining.jpg">
-            <img class="w-full h-full object-cover" src="assets/img/venue/venue-main-lounge-dining.jpg" alt="Main lounge and dining area" loading="lazy">
-          </button>
-          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Outdoor seating in the courtyard" data-full="assets/img/venue/venue-courtyard-outdoor-seating.jpg">
-            <img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-outdoor-seating.jpg" alt="Outdoor seating in the courtyard" loading="lazy">
-          </button>
-          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="Courtyard mural and wine barrel" data-full="assets/img/venue/venue-courtyard-mural-wine-barrel.jpg">
-            <img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-mural-wine-barrel.jpg" alt="Courtyard mural with wine barrel" loading="lazy">
-          </button>
-          <button class="reveal img-zoom rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]" data-lightbox data-caption="The Spitfire mural on the club wall" data-full="assets/img/venue/venue-spitfire-mural-exterior.jpg">
-            <img class="w-full h-full object-cover" src="assets/img/venue/venue-spitfire-mural-exterior.jpg" alt="Spitfire mural on the club wall" loading="lazy">
-          </button>
+        <div class="mt-8 marquee-wrap">
+          <div class="marquee-track">
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-louvre-tv.jpg" alt="Covered courtyard with tables and a big screen" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-playground-slide.jpg" alt="Courtyard playground with a slide" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/venue/venue-snooker-pool-room.jpg" alt="Snooker and pool tables" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/venue/venue-tab-sky-screens.jpg" alt="TAB terminal and sport screens" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/venue/venue-main-lounge-dining.jpg" alt="Main lounge and dining area" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-outdoor-seating.jpg" alt="Outdoor seating in the courtyard" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-mural-wine-barrel.jpg" alt="Courtyard mural with wine barrel" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden"><img class="w-full h-full object-cover" src="assets/img/venue/venue-spitfire-mural-exterior.jpg" alt="Spitfire mural on the club wall" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-louvre-tv.jpg" alt="" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-playground-slide.jpg" alt="" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/venue/venue-snooker-pool-room.jpg" alt="" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/venue/venue-tab-sky-screens.jpg" alt="" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/venue/venue-main-lounge-dining.jpg" alt="" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-outdoor-seating.jpg" alt="" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/venue/venue-courtyard-mural-wine-barrel.jpg" alt="" loading="lazy"></div>
+            <div class="marquee-item img-zoom rounded-2xl overflow-hidden" aria-hidden="true"><img class="w-full h-full object-cover" src="assets/img/venue/venue-spitfire-mural-exterior.jpg" alt="" loading="lazy"></div>
+          </div>
         </div>
       </div>
     </section>
