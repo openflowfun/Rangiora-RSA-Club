@@ -25,6 +25,11 @@
     };
   </script>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* Explore the Club slideshows */
+    .img-zoom .ss-img{opacity:0;transition:opacity .8s ease,transform .6s cubic-bezier(.22,1,.36,1)}
+    .img-zoom .ss-img.is-on{opacity:1}
+  </style>
 </head>
 <body class="font-body text-navy bg-cream">
 
@@ -298,42 +303,42 @@
         <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Card -->
           <a href="facilities.html" class="reveal card-hover group bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5">
-            <div class="img-zoom h-56"><img class="w-full h-full object-cover" src="assets/img/club-lounge.jpg" alt="The main lounge bar and courtyard" loading="lazy"></div>
+            <div class="img-zoom h-56 relative" data-slideshow data-delay="300"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/club-lounge.jpg" alt="The main lounge bar"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-louvre-table-coffee.jpg" alt="Courtyard seating under the louvre roof" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-mural-wine-barrel.jpg" alt="The courtyard with mural wall" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-playground-slide.jpg" alt="The courtyard kids playground" loading="lazy"></div>
             <div class="p-7">
               <h3 class="font-display text-2xl font-bold group-hover:text-poppy transition-colors">Lounge Bar &amp; Courtyard</h3>
               <p class="mt-2 text-navy/70">A fantastic main lounge bar opening onto a spacious sunny courtyard with an outdoor sports screen.</p>
             </div>
           </a>
           <a href="the-spitfire-on-victoria/" class="reveal delay-1 card-hover group bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5">
-            <div class="img-zoom h-56"><img class="w-full h-full object-cover" src="assets/img/restaurant-dining.jpg" alt="Restaurant tables set for dinner service" loading="lazy"></div>
+            <div class="img-zoom h-56 relative" data-slideshow data-delay="600"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/restaurant-dining.jpg" alt="Spitfire restaurant tables set for service"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-spitfire-mural-exterior.jpg" alt="The Spitfire mural outside the club" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/spitfire-function-1.jpg" alt="The Spitfire restaurant set for a function" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/food/food-double-smash-burger.jpg" alt="Double smash burger from the Spitfire kitchen" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/food/dessert-summer-pavlova-stack.jpg" alt="Summer pavlova stack dessert" loading="lazy"></div>
             <div class="p-7">
               <h3 class="font-display text-2xl font-bold group-hover:text-poppy transition-colors">Spitfire Restaurant</h3>
               <p class="mt-2 text-navy/70">Open to all guests 7 days a week - dine in or takeaway, from 11.30am daily.</p>
             </div>
           </a>
           <a href="facilities.html#gaming" class="reveal delay-2 card-hover group bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5">
-            <div class="img-zoom h-56"><img class="w-full h-full object-cover" src="assets/img/club-lounge.jpg" alt="The gaming room with darts, pool and TAB" loading="lazy"></div>
+            <div class="img-zoom h-56 relative" data-slideshow data-delay="900"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/venue/venue-tab-sky-screens.jpg" alt="TAB and Sky sports screens"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-louvre-tv.jpg" alt="The outdoor courtyard sports screen" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-main-lounge-dining.jpg" alt="Lounge with big screens" loading="lazy"></div>
             <div class="p-7">
               <h3 class="font-display text-2xl font-bold group-hover:text-poppy transition-colors">Gaming &amp; Sport</h3>
               <p class="mt-2 text-navy/70">18 modern gaming machines, pool tables, dart boards, snooker, TAB, ATM and Sky TV.</p>
             </div>
           </a>
           <a href="functions.html" class="reveal card-hover group bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5">
-            <div class="img-zoom h-56"><img class="w-full h-full object-cover" src="assets/img/rooms/kippenberger-room2-round.jpg" alt="Kippenberger Function Room 2 set up for a celebration" loading="lazy"></div>
+            <div class="img-zoom h-56 relative" data-slideshow data-delay="1200"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/rooms/kippenberger-room2-round.jpg" alt="Kippenberger Function Room 2 set with round tables"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/fraser-room-1.jpg" alt="The Fraser Room set for a function" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/kippenberger-room1-dining.jpg" alt="Kippenberger Function Room 1 long tables" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/spitfire-function-2.jpg" alt="The Spitfire restaurant set for a celebration" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/rooms/kippenberger-joint.jpg" alt="Kippenberger Rooms 1 and 2 joined" loading="lazy"></div>
             <div class="p-7">
               <h3 class="font-display text-2xl font-bold group-hover:text-poppy transition-colors">Functions &amp; Venue Hire</h3>
               <p class="mt-2 text-navy/70">Six spaces to hire - the Fraser Room, Kippenberger Rooms 1 &amp; 2, the Poppy Room and the Spitfire Restaurant.</p>
             </div>
           </a>
           <a href="whats-on.html" class="reveal delay-1 card-hover group bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5">
-            <div class="img-zoom h-56"><img class="w-full h-full object-cover" src="assets/img/function-event-lights.jpg" alt="Live entertainment with colourful lights" loading="lazy"></div>
+            <div class="img-zoom h-56 relative" data-slideshow data-delay="1500"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/function-event-lights.jpg" alt="Live entertainment with colourful lights"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/function-dance-floor.jpg" alt="The function room dance floor" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-tab-sky-screens.jpg" alt="Live sport on the club screens" loading="lazy"></div>
             <div class="p-7">
               <h3 class="font-display text-2xl font-bold group-hover:text-poppy transition-colors">Events &amp; Entertainment</h3>
               <p class="mt-2 text-navy/70">Live sport, the Thursday members draw at 6pm, entertainment and community events.</p>
             </div>
           </a>
           <a href="membership.html" class="reveal delay-2 card-hover group bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5">
-            <div class="img-zoom h-56"><img class="w-full h-full object-cover" src="assets/img/club-courtyard.jpg" alt="The outdoor courtyard, a great spot to relax with friends" loading="lazy"></div>
+            <div class="img-zoom h-56 relative" data-slideshow data-delay="1800"><img class="absolute inset-0 w-full h-full object-cover ss-img is-on" src="assets/img/club-courtyard.jpg" alt="The outdoor courtyard"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-snooker-pool-room.jpg" alt="The snooker and pool room" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-courtyard-outdoor-seating.jpg" alt="Courtyard outdoor seating" loading="lazy"><img class="absolute inset-0 w-full h-full object-cover ss-img" src="assets/img/venue/venue-outdoor-table-entrance.jpg" alt="Outdoor table by the entrance" loading="lazy"></div>
             <div class="p-7">
               <h3 class="font-display text-2xl font-bold group-hover:text-poppy transition-colors">Club Sections</h3>
               <p class="mt-2 text-navy/70">Darts, indoor bowls, snooker, fishing, golf, pool, welfare, women's, lifestyle &amp; veterans.</p>
@@ -510,6 +515,25 @@
     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
   </button>
 
+  <script>
+    /* Explore the Club: swap each card's photos every 2 seconds */
+    (function(){
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+      document.querySelectorAll('[data-slideshow]').forEach(function(box){
+        var imgs = box.querySelectorAll('.ss-img'); if (imgs.length < 2) return;
+        var i = 0;
+        setTimeout(function(){
+          setInterval(function(){
+            imgs[i].classList.remove('is-on');
+            i = (i + 1) % imgs.length;
+            if (imgs[i].loading === 'lazy') imgs[i].loading = 'eager';
+            imgs[i].classList.add('is-on');
+          }, 2000);
+        }, parseInt(box.getAttribute('data-delay') || '0', 10));
+      });
+    })();
+  </script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
