@@ -248,3 +248,23 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   #mobile-menu a.block { padding: .3rem 0 !important; }
   #mobile-menu .btn-primary { margin-top: .4rem !important; padding-top: .55rem; padding-bottom: .55rem; }
 }
+
+/* --------------------------------------------------------------------------
+   iPad / tablet (touch screens 640-1366px wide): centre-aligned layout
+   Desktop computers and phones are not affected by this block.
+   -------------------------------------------------------------------------- */
+@media (min-width: 640px) and (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+  html, body { overflow-x: clip; }
+  main :is(h1, h2, h3, h4, p, figcaption):not(form *):not(li *):not(.keep-left),
+  footer :is(h1, h2, h3, h4, p):not(.keep-left) { text-align: center; }
+  main .flex-wrap, footer .flex-wrap { justify-content: center; }
+  main .eyebrow.flex { justify-content: center; }
+  main .max-w-3xl, main .max-w-2xl, main .max-w-xl, main .max-w-lg { margin-left: auto; margin-right: auto; }
+  /* home hero text sits in the centre of the video */
+  .ipad-hero { align-items: center !important; }
+  .ipad-hero > div { width: min(36rem, 100%) !important; text-align: center; }
+  .ipad-hero .flex { justify-content: center; }
+  .ipad-hero .hero-address { justify-content: center; }
+  /* keep the floating "$4M" badge inside the screen */
+  .ipad-badge { right: .5rem !important; }
+}
