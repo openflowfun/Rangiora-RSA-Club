@@ -79,3 +79,12 @@ All images are royalty-free Unsplash placeholders marked with `<!-- PLACEHOLDER 
 - **Accessibility** — semantic landmarks, skip-friendly structure, focus states, `aria-expanded` on menus/accordions, alt text on all images, `prefers-reduced-motion` respected.
 - **SEO** — unique title/description per page, Open Graph tags, descriptive headings.
 - **The Google Map** uses the free `output=embed` endpoint — no API key required.
+
+## Deploying on Cloudflare Pages (go-live)
+
+- Framework preset: **None**. Build command: *(leave empty)*. Build output directory: `/` (the repo root). Production branch: `main`.
+- `_redirects` sends the old WordPress addresses to the new pages (301). `_headers` adds security and cache headers. `robots.txt`, `sitemap.xml` and `404.html` are included.
+- `functions/api/submit.js` handles all forms (see the Forms section). It needs the Pages variables `RESEND_API_KEY` and `MAIL_FROM`.
+- Add both `rangiorarsa.nz` and `www.rangiorarsa.nz` as custom domains, and redirect `www` to the bare domain.
+- Cloudflare Pages serves clean URLs: `/about.html` redirects to `/about`, and canonical tags and the sitemap use the clean versions.
+- Largest file is the hero video (about 21 MB). Pages rejects files over 25 MB.
